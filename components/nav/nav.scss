@@ -1,0 +1,28 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 52px 70px;
+    height: $menuHeight;
+
+    &__content{
+        // width: 30%;
+        // display: flex;
+        // justify-content: space-evenly;
+        // align-items: center;
+        a{
+            color: #fff;
+            text-decoration: none;
+            padding: 30px;
+
+            &:hover{
+                color: $purple;
+            }
+
+            &.active{
+                color: $purple;
+            }
+        }
+    }
+}
