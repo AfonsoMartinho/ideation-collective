@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Button from "../components/button";
-import HorizontalCarousel from "../components/HorizontalCarousel";
+import HorizontalCarousel from "../components/horizontalCarousel";
 import TestimonialCard from "../components/testimonialCard";
 
 export default function Home() {
