@@ -40,4 +40,93 @@
         justify-content: center;
         align-items: center;
     }
+
+    &__image-showcase{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 100px;
+        &__img{
+            width: 100%;
+        }
+    }
+
+    &__studio-showcase{
+        padding: 160px 227px 0 227px;
+        color: #fff;
+        font-size: 36px;
+        line-height: 45px;
+        letter-spacing: 0.02em;
+        display: flex;
+        flex-direction: column;
+        &__text2{
+            margin-top: 50px;
+        }
+        &__button{
+            margin-top: 40px;
+        }
+    }
+
+    &__testimonials{
+        margin-top: 160px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 258px;
+        &__title{
+            color: $purple;
+            font-size: 16px;
+            line-height: 18px;
+            letter-spacing: 0.02em;
+        }
+        &__subtitle{
+            font-size: 36px;
+            line-height: 41px;
+            letter-spacing: 0.02em;
+            color: #fff;
+            margin-top: 15px;
+        }
+        &__list{
+            margin-top: 100px;
+            width: calc(100% + $mainPadding);
+        }
+    }
+
+    &__mission{
+        width: 100%;
+        margin-top: 240px;
+        &__row{
+            width: 100%;
+            text-align: left;
+            font-size: 96px;
+            line-height: 140px;
+            letter-spacing: 0.02em;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            &__gif1{
+                height: 103px;
+                padding: 0 50px;
+            }
+
+            &__gif2{
+                height: 103px;
+                padding: 0 50px 0 0;
+            }
+
+            &__gif3{
+                height: 103px;
+                padding: 0 50px;
+            }
+        }
+    }
+
+    &__services{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 125px;
+    }
+
 }
