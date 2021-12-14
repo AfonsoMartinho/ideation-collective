@@ -1,0 +1,70 @@
+.h-carousel{
+    width: 100%;
+    height: 397px;
+    overflow-y: scroll;
+
+
+    &__content{
+        width: 100%;
+        height: 380px;
+        display: grid;
+        grid-gap: calc(var(--gutter) / 2);
+        grid-template-columns: repeat(4, calc(50% - var(--gutter) * 2)); // change 4 for the number of items
+        grid-template-rows: minmax(150px, 1fr);
+        
+        overflow-x: scroll;
+        scroll-snap-type: x proximity;
+        padding-bottom: calc(.75 * var(--gutter));
+        margin-bottom: calc(-.25 * var(--gutter));
+        list-style: none;
+        padding: 0;
+
+        scrollbar-color: #fff #c4c4c4;
+        &::-webkit-scrollbar {
+            height: 1px;
+            width: 120px;
+            margin: 50px;
+        }
+
+        &::-webkit-scrollbar-track {
+            height: 1px;
+            background: #c4c4c4;
+            margin-right: 50px;
+            background-clip: content-box;
+          }
+          
+          &::-webkit-scrollbar-thumb {
+              padding: 100px;
+              background: #fff;
+              outline: 1px solid #fff;
+              border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            &::end{
+                margin-right: 50px; 
+            }
+          }
+          
+        ::-webkit-scrollbar-thumb {
+            &::start{
+                margin-left: 50px;
+            }
+          }
+
+        & li{
+            height: 317px;
+            width: 310px;
+            scroll-snap-align: center;
+            padding: calc(var(--gutter) / 2 * 1.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+:root {
+    --gutter: 170px; // space between cards
+}
