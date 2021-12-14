@@ -1,8 +1,5 @@
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import Button from "../components/button";
-import Tag from "../components/tag";
 import HorizontalCarousel from "../components/HorizontalCarousel";
 import TestimonialCard from "../components/testimonialCard";
 
