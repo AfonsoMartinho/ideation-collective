@@ -2,12 +2,12 @@
 @import "variables";
 @import "reset";
 @import "home";
+@import "services";
 
 body, html{
     background-color: $background;
     font-family: "Neue Haas Grotesk Display Pro";
     color: #fff;
-    height: 100%;
     width: 100%;
 }
 

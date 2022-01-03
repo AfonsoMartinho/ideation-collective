@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Button from "../components/button";
+import Tag from "../components/tag";
 import HorizontalCarousel from "../components/horizontalCarousel";
 import TestimonialCard from "../components/testimonialCard";
 
@@ -109,6 +110,37 @@ export default function Home() {
               <div className={`${rootClassName}__services__service`}>
                 <img src="/assets/consultancy.svg" alt="design-development" />
                 <div className={`${rootClassName}__services__service__title`}>Consultancy</div>
+              </div>
+            </div>
+            <div className={`${rootClassName}__strategic-design`}>
+              <span className={`${rootClassName}__strategic-design__text`}>Strategic design is the core of our work that leads to <strong>remarkable outcomes.</strong></span>
+            </div>
+            <div className={`${rootClassName}__case-studies`}>
+              <div className={`${rootClassName}__case-studies__title`}>featured case studies</div>
+              <div className={`${rootClassName}__case-studies__subtitle`}>
+                <div className={`${rootClassName}__case-studies__subtitle__text`}>We’re proud to have worked with <br/> these <strong>incredible</strong> companies.</div>
+                <div className={`${rootClassName}__case-studies__subtitle__button`}> <Button>see all projects</Button> </div>
+              </div>
+              <div className={`${rootClassName}__case-studies__list`}>
+                <div className={`${rootClassName}__case-studies__list__case`}>
+                  <img className={`${rootClassName}__case-studies__list__case__logo`} src="assets/olie-logo.png" alt="olie" />
+                  <div className={`${rootClassName}__case-studies__list__case__content`}>
+                    <div className={`${rootClassName}__case-studies__list__case__content__text`}>How we designed a <strong>voice-activated app</strong> that allows users to speak with their groups on-the.go.</div>
+                    <div className={`${rootClassName}__case-studies__list__case__content__tags`}>
+                      <Tag className={`${rootClassName}__case-studies__list__case__content__tags__tag`}>Strategy</Tag>
+                      <Tag className={`${rootClassName}__case-studies__list__case__content__tags__tag`}>Design Development</Tag>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${rootClassName}__case-studies__list__case`}>
+                  <img className={`${rootClassName}__case-studies__list__case__logo`} src="assets/pbs-logo.png" alt="olie" />
+                  <div className={`${rootClassName}__case-studies__list__case__content`}>
+                    <div className={`${rootClassName}__case-studies__list__case__content__text`}>How we sold out a workshop of <strong>Design Thinking</strong> in just two days.</div>
+                    <div className={`${rootClassName}__case-studies__list__case__content__tags`}>
+                      <Tag className={`${rootClassName}__case-studies__list__case__content__tags__tag`}>Consultancy</Tag>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
         </div>

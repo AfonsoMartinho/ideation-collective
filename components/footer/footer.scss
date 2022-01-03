@@ -1,0 +1,47 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 70px 60px 70px;
+    &__top{
+        margin-bottom: 96px;
+        &__title{
+            font-size: 48px;
+            line-height: 55px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+        }
+        &__button{
+            margin-top: 30px;
+        }
+    }
+    &__bottom{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0.02em;
+        color: #fff;
+        &__links{
+            width: 450px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__link{
+                color: #fff;
+                text-decoration: none;
+                padding: 30px;
+    
+                &:hover{
+                    color: $purple;
+                }
+    
+                &.active{
+                    color: $purple;
+                }
+            }
+        }
+    }
+}
