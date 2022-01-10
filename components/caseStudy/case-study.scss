@@ -1,0 +1,45 @@
+.case-study{
+    width: 431px;
+    height: 411px;
+    position: relative;
+    &.olie{
+        background-image: url('/assets/olie-case.png');
+        background-size: 100%;
+    }
+    &.consult{
+        background-image: url('/assets/consult-case.png');
+        background-size: 100%;
+    }
+    &.other{
+        background-image: url('/assets/other-case.png');
+        background-size: 100%;
+    }
+    &.lectures{
+        background-image: url('/assets/lectures-case.png');
+        background-size: 100%;
+    }
+    &.moov{
+        background-image: url('/assets/moov-case.png');
+        background-size: 100%;
+    }
+    &.eazup{
+        background-image: url('/assets/eazup-case.png');
+        background-size: 100%;
+    }
+    &__tags{
+        position: absolute;
+        bottom: 21px;
+        left: 16px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        &__tag{
+            margin: 0 4px;
+            background-color: #776AF6;
+            border: none;
+            span{
+                color:#62F9BB;
+            }
+        }
+    }
+}

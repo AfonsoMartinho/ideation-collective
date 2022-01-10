@@ -14,4 +14,36 @@
         color: #fff;
         padding: 6px 16px;
     }
+    &.active{
+        background: $borderGradient;
+        position: relative;
+        border:none;
+        &:before{
+            content: '';
+            position: absolute;
+            border-radius: 30px;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: $background;
+            transition: all 0.2s ease-in-out;
+            // mask: 
+            //     linear-gradient(#fff 0 0) content-box, 
+            //     linear-gradient(#fff 0 0);
+            // -webkit-mask: 
+            //     linear-gradient(#fff 0 0) content-box, 
+            //     linear-gradient(#fff 0 0);
+            // -webkit-mask-composite: destination-out;
+            // mask-composite: exclude;
+        }
+        span{
+            background: $gradient;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;
+        }
+    }
+
 }

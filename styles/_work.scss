@@ -1,0 +1,28 @@
+.ic-work-wrapper{
+    height: $contentHeight;
+    width: 100%;
+    &__title{
+        font-size: 48px;
+        line-height: 55px;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+    &__tags{
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .tag{
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+   &__case-studies{
+       margin-top: 120px;
+       margin-bottom: 120px;
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+   } 
+}

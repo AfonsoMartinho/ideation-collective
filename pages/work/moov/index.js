@@ -1,7 +1,7 @@
 
 import Tag from "../../../components/tag";
 
-export default function Home() {
+export default function Moov() {
   const rootClassName = 'ic-services-wrapper'
   return (
         <div className={rootClassName}>
