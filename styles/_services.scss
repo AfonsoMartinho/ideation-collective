@@ -7,13 +7,28 @@
         letter-spacing: 0.02em;
     }
     &__services-showcase{
-        border-top: 1px solid #776AF6;
         margin-top: 160px;
         margin-bottom: 120px;
         &__service{
+            border-top: 1px solid #776AF6;
             width: 100%;
             display: flex;
             justify-content: center;
+            margin-bottom: 80px;
+            &__heading{
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                position: absolute;
+                padding: 16px 70px 0 70px;
+                &__text{
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: 0.02em;
+                    color: $purple;
+                }
+            }
             &__img{
                 width: 50%;
                 margin-top: 119px;
@@ -31,6 +46,16 @@
                     font-size: 48px;
                     line-height: 55px;
                     letter-spacing: 0.02em;
+                }
+
+                &__accordiom{
+                    margin-top: 60px;
+                }
+            }
+            &.right{
+                flex-direction: row-reverse;
+                img{
+                    margin-left: 240px;
                 }
             }
         }
