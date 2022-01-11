@@ -1,0 +1,38 @@
+.ic-services-wrapper{
+    &__title{
+        text-align: center;
+        font-size: 48px;
+        line-height: 55px;
+        text-align: center;
+        letter-spacing: 0.02em;
+    }
+    &__services-showcase{
+        border-top: 1px solid #776AF6;
+        margin-top: 160px;
+        margin-bottom: 120px;
+        &__service{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            &__img{
+                width: 50%;
+                margin-top: 119px;
+                margin-left: 122px;
+                img{
+                    width: 294px;
+                }
+            }
+            &__description{
+                width: 50%;
+                margin-top: 119px;
+
+                &__text{
+                    margin-top: 20px;
+                    font-size: 48px;
+                    line-height: 55px;
+                    letter-spacing: 0.02em;
+                }
+            }
+        }
+    }
+}

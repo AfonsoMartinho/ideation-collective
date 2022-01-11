@@ -21,8 +21,14 @@
        margin-top: 120px;
        margin-bottom: 120px;
        display: flex;
-       flex-wrap: wrap;
        justify-content: center;
        align-items: center;
+       &__content{
+           width: 1300px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+       }
    } 
 }

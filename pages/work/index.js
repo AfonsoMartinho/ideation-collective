@@ -40,12 +40,14 @@ export default function Moov() {
             <Tag onClick={()=>{ toogleTag('Consultancy') }} >Consultancy</Tag>
           </div>
           <div className={`${rootClassName}__case-studies`}>
-            <CaseStudy caseName="olie" data-tags={['Strategy', 'Design Development']}/>
-            <CaseStudy caseName="consult" data-tags={['Consultancy']}/>
-            <CaseStudy caseName="other" data-tags={['Strategy', 'Design Development']}/>
-            <CaseStudy caseName="lectures" data-tags={['Consultancy']}/>
-            <CaseStudy caseName="moov" data-tags={['Design Development']}/>
-            <CaseStudy caseName="eazup" data-tags={['Strategy', 'Design Development']}/>
+            <div className={`${rootClassName}__case-studies__content`}>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } } caseName="olie" data-tags={['Strategy', 'Design Development']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="consult" data-tags={['Consultancy']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="other" data-tags={['Strategy', 'Design Development']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="lectures" data-tags={['Consultancy']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="moov" data-tags={['Design Development']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="eazup" data-tags={['Strategy', 'Design Development']}/>
+            </div>
           </div>
 
       </div>
