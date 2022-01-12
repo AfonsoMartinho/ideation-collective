@@ -1,4 +1,5 @@
 @import "palette";
+@import "font";
 @import "variables";
 @import "reset";
 @import "home";
@@ -8,7 +9,7 @@
 
 body, html{
     background-color: $background;
-    font-family: "Neue Haas Grotesk Display Pro";
+    font-family: NeueHaasDisplay;
     color: #fff;
     width: 100%;
 }

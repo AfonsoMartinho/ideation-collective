@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'NeueHaasDisplayTest';
+    src: local('NeueHaasDisplay'),
+         url('/fonts/NeueHaasDisplayBlack.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayBlackItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayBold.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayBoldItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayLightItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayMediu.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayMediumItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayRoman.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayRomanItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayThin.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayThinItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayXThin.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayXThinItalic.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayXXThin.ttf') format('ttf'),
+         url('/fonts/NeueHaasDisplayXXThinItalic.ttf') format('ttf'),
+}
+
+
+  @font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("/fonts/NeueHaasDisplayRoman.ttf");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("/fonts/NeueHaasDisplayMediu.ttf");
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("/fonts/NeueHaasDisplayRoman.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("/fonts/NeueHaasDisplayThin.ttf");
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("/fonts/NeueHaasDisplayXThin.ttf");
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "NeueHaasDisplay";
+    src: url("/fonts/NeueHaasDisplayXXThin.ttf");
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+  }
+
+  strong{
+    line-height: 43px;
+  }
