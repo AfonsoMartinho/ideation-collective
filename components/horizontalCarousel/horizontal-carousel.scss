@@ -6,7 +6,8 @@
 
     &__content{
         width: 100%;
-        height: 380px;
+        height: 397px;
+        margin: 0;
         display: grid;
         grid-gap: calc(var(--gutter) / 2);
         grid-template-columns: repeat(4, calc(50% - var(--gutter) * 2)); // change 4 for the number of items
@@ -18,12 +19,16 @@
         margin-bottom: calc(-.25 * var(--gutter));
         list-style: none;
         padding: 0;
+        div{
+            width: 310px;
+        }
 
         scrollbar-color: #fff #c4c4c4;
         &::-webkit-scrollbar {
-            height: 1px;
+            height: 6px;
             width: 120px;
             margin: 50px;
+            cursor: pointer;
         }
 
         &::-webkit-scrollbar-track {
@@ -31,16 +36,20 @@
             background: #c4c4c4;
             margin-right: 50px;
             background-clip: content-box;
+            cursor: pointer;
           }
           
           &::-webkit-scrollbar-thumb {
               padding: 100px;
               background: #fff;
               outline: 1px solid #fff;
+              height: 3px;
               border-radius: 2px;
+              cursor: pointer;
         }
 
         ::-webkit-scrollbar-thumb {
+            cursor: pointer;
             &::end{
                 margin-right: 50px; 
             }
@@ -54,7 +63,7 @@
 
         & li{
             height: 317px;
-            width: 310px;
+            width: 330px;
             scroll-snap-align: center;
             padding: calc(var(--gutter) / 2 * 1.5);
             display: flex;
@@ -66,5 +75,5 @@
 }
 
 :root {
-    --gutter: 170px; // space between cards
+    --gutter: 194px; // space between cards
 }

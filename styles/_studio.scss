@@ -1,0 +1,113 @@
+.ic-studio-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    &__title{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 840px;
+        margin: auto;
+        &__main{
+            width: 100%;
+            font-size: 48px;
+            letter-spacing: 0.02em;
+            line-height: 58px;
+            text-align: left;
+        }
+        &__description{
+            width: 100%;
+            margin-top: 50px;
+            letter-spacing: 0.02em;
+            font-size: 36px;
+            line-height: 45px;
+            text-align: left;
+        }
+    }
+    &__main-img{
+        width: 1300px;
+        margin-top: 100px;
+        img{
+            width: 100%;
+        }
+    }
+    &__text{
+        text-align: center;
+        font-size: 36px;
+        line-height: 43px;
+        text-align: center;
+        letter-spacing: 0.02em;
+        margin-top: 120px;
+    }
+
+    &__img-gallery{
+        width: 100%;
+        margin-top: 120px;
+        &__row1{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &__row2{
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+        }
+        &__studio2{
+            width: 527px;
+        }
+        &__studio3{
+            width: 634px;
+            height: 100%;
+        }
+        &__studio4{
+            width: 638px;
+        }
+    }
+    &__gif{
+        width: 100%;
+        font-size: 96px;
+        line-height: 140px;
+        margin-top: 130px;
+        /* identical to box height, or 146% */
+
+        letter-spacing: 0.02em;
+        text-align: left;
+        &__row{
+            width: 100%;
+        }
+    }
+    &__process{
+        margin-top: 120px;
+        width: 100%;
+    }
+    &__final-imgs{
+        margin-top: 140px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &__studio5{
+            width: 409px;
+            height: 100%;
+            margin-top: 135px;
+        }
+        &__studio6{
+            width: 747px;
+            height: 100%;
+        }
+    }
+    &__final-words{
+        margin-top: 160px;
+        margin-bottom: 120px;
+        &__text{
+            font-size: 36px;
+            line-height: 45px;
+            /* or 125% */
+
+            letter-spacing: 0.02em;
+            margin-bottom: 30px;
+        }
+    }
+}

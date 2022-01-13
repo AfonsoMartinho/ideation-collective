@@ -1,32 +1,26 @@
 .testimonial-card{
-    width: 310px;
-    height: 317px;
+    width: 330px;
     min-height: 317px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    position: relative;
     &__logo{
         height: 40px;
+        margin-bottom: 40px;
     }
     &__content{
         font-style: normal;
         font-weight: normal;
         font-size: 24px;
         line-height: 33px;
-        margin-top: 10px;
 
         letter-spacing: 0.01em;
 
         color: #FFFFFF;
     }
     &__footer{
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
         font-size: 16px;
         line-height: 19px;
-
+        position: absolute;
+        top: 308px;
         letter-spacing: 0.02em;
     }
 }

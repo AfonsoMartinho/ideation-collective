@@ -29,6 +29,34 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: center;
+            .case-study{
+                // transition: all 0.3s ease;
+                // display: none;
+                &.show{
+                    animation: fadeIn 1s ease-in-out;
+                    display: flex;
+                }
+                &.hide{
+                    // animation: fadeOut 1s ease-in-out;
+                    display: none;
+                }
+            }
        }
+       @keyframes fadeIn{
+            0%{
+                transform: scale(0.5);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+        @keyframes fadeOut{
+            0%{
+                opacity: 1;
+            }
+            100%{
+                opacity: 0;
+            }
+        }
    } 
 }

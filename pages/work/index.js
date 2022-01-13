@@ -8,19 +8,25 @@ export default function Moov() {
 
   useEffect(() => {
     allCaseStudies = document.querySelectorAll('.case-study');
+    toogleTag('All')
   }, []);
 
   const toogleTag = (tag) => {
     for (const caseStudy of allCaseStudies) {
+      caseStudy.classList.remove("show");
+      caseStudy.classList.add("hide");
       if(tag === 'All') {
-        caseStudy.style.display = "flex";
+        caseStudy.classList.remove("hide");
+        caseStudy.classList.add("show");
       }
       else{
         const tags = caseStudy.dataset.tags;
         if(tags.includes(tag)) {
-          caseStudy.style.display = "flex";
+          caseStudy.classList.remove("hide");
+          caseStudy.classList.add("show");
         } else {
-          caseStudy.style.display = "none";
+          caseStudy.classList.remove("show");
+          caseStudy.classList.add("hide");
         }
       }
     }
