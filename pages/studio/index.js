@@ -1,4 +1,5 @@
 import Button from "../../components/button";
+import ProcessAnimation from "../../components/processAnimation";
 
 export default function Studio() {
   const rootClassName = 'ic-studio-wrapper'
@@ -36,26 +37,26 @@ export default function Studio() {
             <div className={`${rootClassName}__gif`}>
               <div className={`${rootClassName}__gif__row`}>
                 <span>Our approach </span>
-                <img className={`${rootClassName}__gif__row__gif1`} src="/assets/title1.gif"></img>
+                <img className={`${rootClassName}__gif__row__image`} src="/assets/studio7.png"></img>
                 <span> is</span>
               </div>
               <div className={`${rootClassName}__gif__row`}>
-                <img className={`${rootClassName}__gif__row__gif2`} src="/assets/title1.gif"></img>
-                <span>human centered </span>
-                <img className={`${rootClassName}__gif__row__gif3`} src="/assets/title1.gif"></img>
+                <img className={`${rootClassName}__gif__row__image left`} src="/assets/studio8.png"></img>
+                <span> human centered </span>
+                <img className={`${rootClassName}__gif__row__image`} src="/assets/studio9.png"></img>
               </div>
               <div className={`${rootClassName}__gif__row`}>
-                <span> and this</span>
-                <img className={`${rootClassName}__gif__row__gif1`} src="/assets/title1.gif"></img>
+                <span> and this </span>
+                <img className={`${rootClassName}__gif__row__image`} src="/assets/studio10.png"></img>
                 <span> is our</span>
               </div>
               <div className={`${rootClassName}__gif__row`}>
-                <img className={`${rootClassName}__gif__row__gif1`} src="/assets/title1.gif"></img>
+                <img className={`${rootClassName}__gif__row__image left`} src="/assets/studio11.png"></img>
                 <span> process</span>
               </div>
             </div>
             <div className={`${rootClassName}__process`}>
-                PROCESS
+                <ProcessAnimation/>
             </div>
             <div className={`${rootClassName}__final-imgs`}>
                 <img className={`${rootClassName}__final-imgs__studio5`} src="/assets/studio5.png" alt="" />

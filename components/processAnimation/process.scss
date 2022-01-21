@@ -1,0 +1,37 @@
+.ic-process-animation{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &__lottie{
+        width: 60% !important;
+        height: 425px;
+    }
+    &__scrollable{
+        margin-top: 470px;
+        &__text{
+            max-width: 420px;
+            margin-left: 130px;
+            margin-top: 530px;
+            &__slash{
+                font-size: 36px;
+                line-height: 43px;
+                letter-spacing: 0.02em;
+                color: #776AF6;
+            }
+            &__title{
+                margin-top: 10px;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 43px;
+                letter-spacing: 0.02em;
+            }
+            &__description{
+                margin-top: 40px;
+                font-size: 24px;
+                line-height: 33px;
+                letter-spacing: 0.01em;
+            }
+        }
+
+    }
+}
