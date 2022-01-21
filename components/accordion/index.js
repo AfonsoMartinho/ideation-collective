@@ -1,7 +1,6 @@
 export default function Accordion(props) {
     const rootClassName = 'ic-accordion';
     const data = props.data
-    console.log(data);
 
     const toggleSection = (e) => {
         const allDecriptions = document.querySelectorAll(`.${rootClassName}__container__section__description`);

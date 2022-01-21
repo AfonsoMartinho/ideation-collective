@@ -1,5 +1,9 @@
 import Tag from "../../components/tag";
 import Accordion from "../../components/accordion";
+import Table from "../../components/table";
+import Lottie from 'react-lottie';
+import * as animationData from '../../public/assets/lottie/bannerservices.json'
+
 
 export default function Services() {
   const rootClassName = 'ic-services-wrapper'
@@ -21,10 +25,19 @@ const consultancyData = [
     { title: 'UX Design Consulting', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
     { title: 'In-House Training', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
 ]
+const lottieOptions = {
+    loop: true,
+    autoplay: true, 
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice'
+    }
+  };
   return (
         <div className={rootClassName}>
             <div className={`${rootClassName}__banner`}>
-                <img width="100%" src="/assets/services-banner.png" alt="ideation-showcase" />
+                {/* <img width="100%" src="/assets/services-banner.png" alt="ideation-showcase" /> */}
+                <Lottie options={lottieOptions} />
             </div>
             <div className={`${rootClassName}__title`}>
                 We love <span>co-creating</span> ideas for <br />
@@ -76,7 +89,36 @@ const consultancyData = [
                         <div className={`${rootClassName}__services-showcase__service__description__text`}>We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.</div>
                         <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><Accordion data={consultancyData}/></div>                    
                     </div>
-                </div>              
+                </div>
+                <div className={`${rootClassName}__final-words`}>
+                We work with a <strong> diverse team</strong> of <strong> talented</strong> <br />
+                 individuals that work closely with <strong> our</strong> <br />
+                  clients to solve <strong>complex</strong> problems.
+                </div>
+                <div className={`${rootClassName}__table`}>
+                    <Table data={ {
+                        title : 'Budget',
+                        rows:{
+                            'Strategy': [
+                                { name: 'User Experience', price: '2 250€'},
+                                { name: 'Discover & Research', price: '2 250€'},
+                                { name: 'Product Strategy', price: '3 500€'}
+
+                            ],
+                            'Design Development': [
+                                { name: 'Landing Page', price: '600€'},
+                                { name: '5 page Website', price: '1 500€'},
+                                { name: 'Product Design', price: '3 250€'}
+                            ],
+                            'Consultancy': [
+                                { name: 'Design-Driven Innovation', price: '50€/hr'},
+                                { name: 'UX Design Consulting', price: '50€/hr'},
+                            ]
+                        }
+                    } } />
+                </div>
+
+
             </div>
             
         </div>

@@ -1,0 +1,75 @@
+.ic-table{
+    &__title{
+        font-size: 36px;
+        line-height: 43px;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #C4C4C4;
+    }
+    &__body{
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        &__section{
+            border-bottom: 1px solid #C4C4C4;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            width: 100%;
+            &__header{
+                font-size: 36px;
+                line-height: 43px;
+                letter-spacing: 0.02em;
+                color: #FFFFFF;
+                min-width: 320px;
+                margin-top: 22px;
+            }
+            &__rows{
+                min-width: calc(100% - 320px);
+                &__row{
+                    display: flex;
+                    height: 58px;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 1px solid #C4C4C4;
+                    &:last-of-type{
+                        border-bottom: none;
+                    }
+                    &__column1{
+                        font-size: 16px;
+                        line-height: 19px;
+                        letter-spacing: 0.02em;
+                        color: #FFFFFF;
+                    }
+                    &__column2{
+                        border-left: 1px solid #C4C4C4;
+                        min-width: 200px;
+                        text-align: right;
+                        height: 100%;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        text-align: right;
+                        letter-spacing: 0.02em;
+                        color: #FFFFFF;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+
+                        span{
+                            font-size: 14px;
+                            line-height: 17px;
+                            text-align: right;
+                            letter-spacing: 0.02em;
+                            margin-right: 10px;
+                            color: #776AF6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
