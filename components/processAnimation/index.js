@@ -1,4 +1,4 @@
-import * as animationData from '/public/assets/lottie/process.json'
+import * as animationData from '/assets/lottie/process.json'
 import dynamic from "next/dynamic";
 const LottieScrollSection = dynamic(
     import("react-lottie-tools").then((data) => data.LottieScrollSection),
