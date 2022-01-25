@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 const LottieScrollSection = dynamic(
     import("react-lottie-tools").then((data) => data.LottieScrollSection),
     { ssr: false } // ssr is important to be false
-  );
+  ); 
 
 export default function ProcessAnimation() {
     const rootClassName='ic-process-animation'
