@@ -14,7 +14,7 @@ export default function Nav(props) {
                 </div>
             ) }
             <Button>book a call</Button>
-        </div> 
+        </div>
       </>
     );
   }
