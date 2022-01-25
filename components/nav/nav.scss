@@ -5,6 +5,25 @@
     width: 100%;
     padding: 52px 70px 116px 70px;
 
+    &__logo{
+        width: 104px;
+        height: 35px;
+        &:hover{
+            height: 35px;
+            width: 104px;
+            background-image: url('/assets/logo-hover.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position-x: 4px;
+            cursor: pointer;
+            img{
+                display: none;
+                width: 100px;
+
+            }
+        }
+    }
+
     &__content{
         // width: 30%;
         // display: flex;
