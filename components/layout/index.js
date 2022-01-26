@@ -3,7 +3,7 @@ import Footer from "../footer";
 import { useRouter } from 'next/router';
 
 export default function Layout(props) {
-    const rootClassName = 'ic-moov-wrapper';
+    const rootClassName = 'ic-layout-wrapper';
     const router = useRouter();
     return (
         <div className={rootClassName}>
