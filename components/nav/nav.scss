@@ -4,10 +4,18 @@
     align-items: center;
     width: 100%;
     padding: 52px 70px 116px 70px;
+    @include mobile {
+        padding: 50px 0 116px 0px;
+    }
 
     &__logo{
         width: 104px;
         height: 35px;
+        @include mobile {
+            width: 84px;
+            height: 30px;
+           
+        }
         &:hover{
             height: 35px;
             width: 104px;
@@ -43,4 +51,154 @@
             }
         }
     }
+
+    &__nav-mobile{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        overflow: scroll;
+        background-color:#776AF6 ;
+        z-index: 9;
+        transition: all 0.5s ease-in-out;
+        &.show{
+            height: 100%;
+        }
+        &.hide{
+            height: 0;
+        }
+        &__top{
+            padding: 30px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &__logo{
+                width: 84px;
+                height: 30px;
+                img{
+                    width: 100;
+                    height: 100%;
+                }
+            }
+            &__close{
+                cursor: pointer;
+            }
+        }
+        
+        &__content{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            a{
+                color: #252423;
+                text-decoration: none;
+                padding: 5px 30px;
+                font-size: 68px;
+                line-height: 82px;
+                letter-spacing: 0.02em;
+    
+                &:hover{
+                    color: white;
+                }
+    
+                &.active{
+                    color: white;
+                }
+            }
+        }
+        &__footer{
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0 30px;
+            &__button{
+                width: 100%;
+                .button{
+                    width: 100%;
+                    background: none;
+                    border: 2px solid #62F9BB;
+                    &::before{
+                        background-color: $purple;
+                    }
+                    span{
+                        background: none;
+                        color: #62F9BB;
+                        -webkit-text-fill-color: #62F9BB;
+                    }
+                }
+            }
+            &__contacts{
+                margin-top: 50px;
+                font-size: 14px;
+                color: #0C151A;
+                line-height: 17px;
+                letter-spacing: 0.02em;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                span{
+                    margin-bottom: 9px;
+                    display: flex;
+                    text-align: left;
+                }
+            }
+            &__social{
+                margin-top: 80px;
+                font-size: 14px;
+                line-height: 17px;
+                letter-spacing: 0.02em;
+                color: #0C151A;
+                span{
+                    margin-bottom: 20px;
+                    margin-bottom: 9px;
+                    display: flex;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__mobile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: fixed;
+        background-color: #0c151aec;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 30px 20px 30px;
+        a{
+            width: 85px;
+            height: 30px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &__left{
+            justify-content: flex-end;
+            display: flex;
+            align-items: center;
+            &__burger{
+                width: 30px;
+                height: 20px;
+                margin-left: 20px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                &:hover{
+                    opacity: 0.7;
+                    cursor: pointer;
+                }
+            } 
+        }
+    }
+
 }

@@ -13,6 +13,7 @@ body, html{
     font-family: NeueHaasDisplay;
     color: #fff;
     width: 100%;
+    overflow: scroll;
 }
 
 #__next, .container, main{
@@ -28,6 +29,9 @@ body, html{
 
 .hide-desktop{
     @include desktop {
+        display: none !important;
+    }
+    @include tablet {
         display: none !important;
     }
 }

@@ -49,5 +49,9 @@
         background-clip: text;
         -webkit-text-fill-color: transparent;
         z-index: 1;
+        @include mobile {
+            font-size: 14px;
+           
+        }
     }
 }

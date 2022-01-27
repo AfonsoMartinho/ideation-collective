@@ -5,12 +5,10 @@
     
     @include tablet {
         padding: 0 50px;
-        background-color: red;
     }
     
     @include mobile {
         padding: 0 32px;
-        background-color: blue;
     }
     
 }
