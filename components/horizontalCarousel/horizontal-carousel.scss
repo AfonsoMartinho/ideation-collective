@@ -3,6 +3,10 @@
     height: 397px;
     overflow-y: scroll;
 
+    @include mobile {
+        height: 270px;
+    }
+
 
     &__content{
         width: 100%;
@@ -19,8 +23,15 @@
         margin-bottom: calc(-.25 * var(--gutter));
         list-style: none;
         padding: 0;
+        @include mobile{
+            height: 270px;
+            grid-template-columns: repeat(4, calc(78% - var(--gutter) * 2)); // change 4 for the number of items            
+        }
         div{
             width: 310px;
+            @include mobile{
+                width: 240px;
+            }
         }
 
         scrollbar-color: #fff #c4c4c4;
@@ -70,10 +81,17 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            @include mobile{
+                width: 260px;
+                height: 260px;
+            }
         }
     }
 }
 
 :root {
     --gutter: 194px; // space between cards
+    @include mobile{
+        --gutter: 0px; // space between cards
+    }
 }

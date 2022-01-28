@@ -13,7 +13,9 @@ body, html{
     font-family: NeueHaasDisplay;
     color: #fff;
     width: 100%;
-    overflow: scroll;
+    @include mobile{
+        overflow: scroll;
+    }
 }
 
 #__next, .container, main{

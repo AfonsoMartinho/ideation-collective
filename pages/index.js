@@ -85,18 +85,24 @@ export default function Home() {
               <div className={`${rootClassName}__mission__row`}>
                 <span>We love</span>
                 <img className={`${rootClassName}__mission__row__gif1`} src="assets/title1.gif"></img>
-                <span>co-creating</span>
+                <span className="hide-mobile">co-creating</span>
+                <img className={`hide-mobile ${rootClassName}__mission__row__gif2 hide-desktop`} src="assets/title1.gif"></img>
               </div>
               <div className={`${rootClassName}__mission__row`}>
-                <img className={`${rootClassName}__mission__row__gif2`} src="assets/title1.gif"></img>
+                <span className="hide-desktop">co-creating</span>
+                <img className={`hide-desktop ${rootClassName}__mission__row__gif2 hide-desktop`} src="assets/title1.gif"></img>
+              </div>
+              <div className={`${rootClassName}__mission__row`}>
+                <img className={`${rootClassName}__mission__row__gif2 hide-mobile`} src="assets/title1.gif"></img>
                 <span> for the </span>
                 <img className={`${rootClassName}__mission__row__gif3`} src="assets/title1.gif"></img>
-                <span> digital</span>
+                <span className="hide-mobile"> digital</span>
               </div>
               <div className={`${rootClassName}__mission__row`}>
-                <span>market.</span>
+                <span className="hide-desktop"> digital &nbsp;</span>
+                <span> market.</span>
               </div>
-              <Button>our services</Button>
+              <Button className={`${rootClassName}__mission__button`}>our services</Button>
             </div>
             <div className={`${rootClassName}__services`}>
               <div className={`${rootClassName}__services__service`}>
@@ -118,8 +124,8 @@ export default function Home() {
             <div className={`${rootClassName}__case-studies`}>
               <div className={`${rootClassName}__case-studies__title`}>featured case studies</div>
               <div className={`${rootClassName}__case-studies__subtitle`}>
-                <div className={`${rootClassName}__case-studies__subtitle__text`}>We’re proud to have worked with <br/> these <strong>incredible</strong> companies.</div>
-                <div className={`${rootClassName}__case-studies__subtitle__button`}> <Button>see all projects</Button> </div>
+                <div className={`${rootClassName}__case-studies__subtitle__text`}>We’re proud to have worked with <br className="hide-mobile"/> these <strong>incredible</strong> companies.</div>
+                <div className={`${rootClassName}__case-studies__subtitle__button hide-mobile`}> <Button>see all projects</Button> </div>
               </div>
               <div className={`${rootClassName}__case-studies__list`}>
                 <div className={`${rootClassName}__case-studies__list__case`}>

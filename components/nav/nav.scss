@@ -6,6 +6,7 @@
     padding: 52px 70px 116px 70px;
     @include mobile {
         padding: 50px 0 116px 0px;
+
     }
 
     &__logo{
@@ -70,7 +71,7 @@
             height: 0;
         }
         &__top{
-            padding: 30px 30px;
+            padding: 50px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -172,7 +173,10 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 20px 30px 20px 30px;
+        padding: 40px 30px 20px 30px;
+        @include mobile{
+            z-index: 9;
+        }
         a{
             width: 85px;
             height: 30px;
