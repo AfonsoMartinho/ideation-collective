@@ -169,11 +169,12 @@
         align-items: center;
         justify-content: space-between;
         position: fixed;
-        background-color: #0c151aec;
+        background-color: #0c151af5;
         top: 0;
-        left: 0;
-        width: 100%;
-        padding: 40px 30px 20px 30px;
+        left: 30px;
+        right: 30px;
+        padding-top: 40px;
+        padding-bottom: 30px;
         @include mobile{
             z-index: 9;
         }

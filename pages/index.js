@@ -15,9 +15,12 @@ export default function Home() {
       <main>
         <div className={rootClassName}>
             <div className={`${rootClassName}__title`}>
-              <div className={`${rootClassName}__title__row`}>
+              <div className={`${rootClassName}__title__row no-wrap`}>
                 <span>We turn</span>
                 <img className={`${rootClassName}__title__row__gif1`} src="assets/title1.gif"></img>
+                <span className="hide-mobile">design</span>
+              </div>
+              <div className={`${rootClassName}__title__row hide-desktop`}>
                 <span>design</span>
               </div>
               <div className={`${rootClassName}__title__row`}>

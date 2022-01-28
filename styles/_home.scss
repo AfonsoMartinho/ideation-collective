@@ -19,16 +19,21 @@
             flex-wrap: wrap;
             align-items: center;
             @include mobile {
-                font-size: 68px;
+                font-size: 50px;
                 line-height: 100px;
+                &.no-wrap{
+                    flex-wrap: nowrap;
+                    letter-spacing: 0;
+                    justify-content: space-between;
+                    img{
+                        height: 80px;
+                        padding: 0 0 0 0px;
+                    }
+                }
             }
             &__gif1{
                 height: 103px;
                 padding: 0 50px;
-                @include mobile {
-                    height: 80px;
-                    padding: 0 0 0 30px;
-                }
             }
 
             &__gif2{

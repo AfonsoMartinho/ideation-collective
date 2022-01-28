@@ -54,12 +54,16 @@
             @include mobile{
                 width: 100%;
                 margin-top: 55px;
+                margin-bottom: 30px;
             }
             &__link{
                 color: #fff;
                 text-decoration: none;
                 padding: 30px;
     
+                @include mobile{
+                    padding: 0
+                }
                 &:hover{
                     color: $purple;
                 }
