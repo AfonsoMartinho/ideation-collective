@@ -1,9 +1,15 @@
 import Tag from "../../components/tag";
 import Accordion from "../../components/accordion";
 import Table from "../../components/table";
-import Lottie from 'react-lottie';
+import dynamic from "next/dynamic";
+
+// import Lottie from 'react-lottie-tools';
 import * as animationData from '../../public/assets/lottie/bannerservices.json'
 
+const LottieAnimation = dynamic(
+    import("react-lottie-tools").then((data) => data.LottieAnimation),
+    { ssr: false } // ssr is important to be false
+);
 
 export default function Services() {
   const rootClassName = 'ic-services-wrapper'
@@ -37,7 +43,7 @@ const lottieOptions = {
         <div className={rootClassName}>
             <div className={`${rootClassName}__banner`}>
                 {/* <img width="100%" src="/assets/services-banner.png" alt="ideation-showcase" /> */}
-                <Lottie options={lottieOptions} />
+                <LottieAnimation options={lottieOptions} />
             </div>
             <div className={`${rootClassName}__title`}>
                 We love <span>co-creating</span> ideas for <br />
