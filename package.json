@@ -20,7 +20,6 @@
     "react-animation-on-scroll": "^2.1.0",
     "react-dom": "17.0.2",
     "react-intersection-observer": "^8.33.1",
-    "react-lottie": "^1.2.3",
     "react-lottie-tools": "^1.1.5",
     "sass": "^1.43.4"
   },
