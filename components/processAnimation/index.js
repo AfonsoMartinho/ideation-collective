@@ -2,6 +2,7 @@ import * as animationData from '../../public/assets/lottie/process.json'
 import dynamic from "next/dynamic";
 import ScrollText from "./scrollText.js";
 
+
 // import { Animator, ScrollPage, batch, Fade, Move, Sticky } from "react-scroll-motion";
 // // import { useEffect } from 'react';
 
@@ -11,7 +12,7 @@ import ScrollText from "./scrollText.js";
 const LottieScrollSection = dynamic(
     import("react-lottie-tools").then((data) => data.LottieScrollSection),
     { ssr: false } // ssr is important to be false
-  );
+);
 // const ScrollSection = dynamic(
 //     import("react-scroll-motion").then((data) => data.ScrollContainer),
 //     { ssr: false } // ssr is important to be false
