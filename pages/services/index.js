@@ -43,7 +43,7 @@ const consultancyData = [
         <div className={rootClassName}>
             <div className={`${rootClassName}__banner`}>
                 {/* <img width="100%" src="/assets/services-banner.png" alt="ideation-showcase" /> */}
-                <LottieAnimation autoplay={true} animation={animationData} />
+                <LottieAnimation loop={true} autoplay={true} animation={animationData} />
             </div>
             <div className={`${rootClassName}__title`}>
                 We love <span>co-creating</span> ideas for <br />
