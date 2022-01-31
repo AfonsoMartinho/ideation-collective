@@ -32,13 +32,16 @@
             .case-study{
                 // transition: all 0.3s ease;
                 // display: none;
-                &.show{
-                    animation: fadeIn 1s ease-in-out;
-                    display: flex;
-                }
+                // display: none;
+                display: flex;
                 &.hide{
-                    // animation: fadeOut 1s ease-in-out;
+                    
                     display: none;
+                    // animation: fadeOut 1s ease-in-out;
+                }
+                &.show{
+                    animation: fadeIn 0.5s ease-in-out;
+                    display: flex;
                 }
             }
        }
