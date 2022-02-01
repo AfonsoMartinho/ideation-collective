@@ -107,10 +107,10 @@ export default function Moov() {
             <strong>clients</strong> to solve <strong>complex</strong> problems.
           </div>
           <div className={`${rootClassName}__tags`}>
-            <Tag onClick={()=>{ toogleTag('All') }} >All</Tag>
-            <Tag onClick={()=>{ toogleTag('Design Development') }} >Design Development</Tag>
-            <Tag onClick={()=>{ toogleTag('Strategy') }} >Strategy</Tag>
-            <Tag onClick={()=>{ toogleTag('Consultancy') }} >Consultancy</Tag>
+            <Tag className={`${ activeTag === 'All' ? 'active' : ''  }`} onClick={()=>{ toogleTag('All') }} >All</Tag>
+            <Tag className={`${ activeTag === 'Design Development' ? 'active' : ''  }`} onClick={()=>{ toogleTag('Design Development') }} >Design Development</Tag>
+            <Tag className={`${ activeTag === 'Strategy' ? 'active' : ''  }`} onClick={()=>{ toogleTag('Strategy') }} >Strategy</Tag>
+            <Tag className={`${ activeTag === 'Consultancy' ? 'active' : ''  }`} onClick={()=>{ toogleTag('Consultancy') }} >Consultancy</Tag>
           </div>
           <div className={`${rootClassName}__case-studies`}>
             <div className={`${rootClassName}__case-studies__content`}>
