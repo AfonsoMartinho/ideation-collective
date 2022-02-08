@@ -37,7 +37,7 @@
             margin-top: 450px;
             height: 100%;
             position: sticky;
-            top: 60%;
+            top: 50%;
 
             transition: all 0.5s ease-in-out;
             background-color: $background;
@@ -45,7 +45,7 @@
             
             &.hide{
                 opacity: 0;
-                // transform: translateY(-900px);
+                transform: translateY(-50px);
             }
             &:not(.hide) {
                 opacity: 1;
