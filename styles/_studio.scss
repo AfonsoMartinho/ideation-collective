@@ -16,6 +16,10 @@
             letter-spacing: 0.02em;
             line-height: 58px;
             text-align: left;
+            @include mobile{
+                font-size: 32px;
+                line-height: 38px;
+            }
         }
         &__description{
             width: 100%;
@@ -24,6 +28,10 @@
             font-size: 36px;
             line-height: 45px;
             text-align: left;
+            @include mobile{
+                font-size: 20px;
+                line-height: 24px;
+            }
         }
     }
     &__main-img{
@@ -40,6 +48,10 @@
         text-align: center;
         letter-spacing: 0.02em;
         margin-top: 120px;
+        @include mobile{
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     &__img-gallery{
@@ -49,21 +61,37 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         &__row2{
             margin-top: 80px;
             display: flex;
             justify-content: center;
+            @include mobile{
+                width: 100%;
+                margin-top: 230px;
+            }
         }
         &__studio2{
             width: 527px;
+            @include mobile{
+                width: 244px;
+            }
         }
         &__studio3{
             width: 634px;
             height: 100%;
+            @include mobile{
+                width: 245px;
+                float: right;
+                margin-top: 30px;
+            }
         }
         &__studio4{
             width: 638px;
+            @include mobile{
+                width: 304px;
+            }
         }
     }
     &__gif{
@@ -75,35 +103,75 @@
 
         letter-spacing: 0.02em;
         text-align: left;
+        @include mobile{
+            font-size: 48px;
+            line-height: 58px;
+        }
         &__row{
             width: 100%;
             display: flex;
             align-items: center;
+            @include mobile{
+                align-items: center;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                margin-top: 10px;
+                .hide-desktop, span{
+                    margin-top: 20px;
+                }
+            }
             &__image{
                 width: 110px;
                 margin: 0 40px;
+                @include mobile{
+                    width: 60px;
+                    height: 56.18px;
+                    margin: 0 30px;
+                    .hide-desktop{
+                        margin-top: 20px;
+                    }
+                }
                 &.left{
                     margin-left: 0;
+                    margin-top: 20px;
                 }
             }
         }
     }
     &__process{
         width: 100%;
+        // overflow: visible;
     }
     &__final-imgs{
         margin-top: 140px;
         width: 100%;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-end;
         &__studio5{
             width: 409px;
             height: 100%;
             margin-top: 135px;
+            @include mobile {
+                width: 100%;
+                margin-top: 30px;
+                display: flex;
+                justify-content: flex-start;
+                .img{
+                    width: 239px;
+                    height: 323px;
+                }
+
+            }
         }
         &__studio6{
             width: 747px;
             height: 100%;
+            @include mobile{
+                width: 301px;
+            }
+
         }
     }
     &__final-words{
@@ -116,6 +184,15 @@
 
             letter-spacing: 0.02em;
             margin-bottom: 30px;
+            @include mobile{
+                width: 238px;
+                font-size: 20px;
+                line-height: 24px;
+                letter-spacing: 0.02em;
+                br{
+                    display: none;
+                }
+            }
         }
     }
 }

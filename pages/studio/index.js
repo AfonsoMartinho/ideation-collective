@@ -1,5 +1,6 @@
 import Button from "../../components/button";
 import ProcessAnimation from "../../components/processAnimation";
+import ProcessAnimationMobile from "../../components/processAnimationMobile";
 
 export default function Studio() {
   const rootClassName = 'ic-studio-wrapper'
@@ -28,8 +29,9 @@ export default function Studio() {
             <div className={`${rootClassName}__img-gallery`}>
                 <div className={`${rootClassName}__img-gallery__row1`}>
                     <img className={`${rootClassName}__img-gallery__studio2`} src="/assets/studio2.png" alt="" />
-                    <img className={`${rootClassName}__img-gallery__studio3`} src="/assets/studio3.png" alt="" />
+                    <img className={`${rootClassName}__img-gallery__studio3 hide-mobile`} src="/assets/studio3.png" alt="" />
                 </div>
+                <img className={`${rootClassName}__img-gallery__studio3 hide-desktop`} src="/assets/studio3.png" alt="" />
                 <div className={`${rootClassName}__img-gallery__row2`}>
                     <img className={`${rootClassName}__img-gallery__studio4`} src="/assets/studio4.png" alt="" />   
                 </div>
@@ -37,30 +39,46 @@ export default function Studio() {
             <div className={`${rootClassName}__gif`}>
               <div className={`${rootClassName}__gif__row`}>
                 <span>Our approach </span>
-                <img className={`${rootClassName}__gif__row__image`} src="/assets/studio7.png"></img>
+                <img className={`${rootClassName}__gif__row__image hide-mobile`} src="/assets/studio7.png"></img>
+                <img className={`${rootClassName}__gif__row__image left hide-desktop`} src="/assets/studio7.png"></img>
                 <span> is</span>
+                <img className={`${rootClassName}__gif__row__image hide-desktop`} src="/assets/studio8.png"></img>
               </div>
               <div className={`${rootClassName}__gif__row`}>
-                <img className={`${rootClassName}__gif__row__image left`} src="/assets/studio8.png"></img>
+                <img className={`${rootClassName}__gif__row__image left hide-mobile`} src="/assets/studio8.png"></img>
                 <span> human centered </span>
-                <img className={`${rootClassName}__gif__row__image`} src="/assets/studio9.png"></img>
+                <img className={`${rootClassName}__gif__row__imagem hide-mobile`} src="/assets/studio9.png"></img>
               </div>
               <div className={`${rootClassName}__gif__row`}>
+                <img className={`${rootClassName}__gif__row__image left hide-desktop`} src="/assets/studio9.png"></img>
                 <span> and this </span>
-                <img className={`${rootClassName}__gif__row__image`} src="/assets/studio10.png"></img>
-                <span> is our</span>
+                <img className={`${rootClassName}__gif__row__image hide-mobile`} src="/assets/studio10.png"></img>
+                <img className={`${rootClassName}__gif__row__image left hide-mobile `} src="/assets/studio10.png"></img>
+                <span className="hide-mobile"> is our</span>
+                {/* <img className={`${rootClassName}__gif__row__image hide-desktop`} src="/assets/studio11.png"></img> */}
               </div>
+                <div className={`${rootClassName}__gif__row hide-desktop`}>
+                    <img className={`${rootClassName}__gif__row__image left`} src="/assets/studio10.png"></img>
+                    <span> is our</span>
+                    <img className={`${rootClassName}__gif__row__image hide-desktop`} src="/assets/studio11.png"></img>
+                </div>
               <div className={`${rootClassName}__gif__row`}>
-                <img className={`${rootClassName}__gif__row__image left`} src="/assets/studio11.png"></img>
+                <img className={`${rootClassName}__gif__row__image left hide-mobile`} src="/assets/studio11.png"></img>
                 <span> process</span>
               </div>
             </div>
-            <div className={`${rootClassName}__process`}>
+            <div className={`${rootClassName}__process hide-mobile`}>
                 <ProcessAnimation/>
             </div>
+            <div className={`${rootClassName}__process hide-desktop`}>
+                <ProcessAnimationMobile/>
+            </div>
             <div className={`${rootClassName}__final-imgs`}>
-                <img className={`${rootClassName}__final-imgs__studio5`} src="/assets/studio5.png" alt="" />
+                <img className={`${rootClassName}__final-imgs__studio5 hide-mobile`} src="/assets/studio5.png" alt="" />
                 <img className={`${rootClassName}__final-imgs__studio6`} src="/assets/studio6.png" alt="" />
+                <div className={`${rootClassName}__final-imgs__studio5`}>
+                    <img className={`${rootClassName}__final-imgs__studio5 hide-desktop img`} src="/assets/studio5.png" alt="" />
+                </div>
             </div>
             <div className={`${rootClassName}__final-words`}>
                 <div className={`${rootClassName}__final-words__text`}>

@@ -9,7 +9,7 @@
     background-color: $background;
     @include mobile {
         padding: 50px 0 116px 0px;
-
+        z-index: 2;        
     }
 
     &__logo{
@@ -172,7 +172,7 @@
         align-items: center;
         justify-content: space-between;
         position: fixed;
-        background-color: #0c151af5;
+        background-color: $background;
         top: 0;
         left: 30px;
         right: 30px;
