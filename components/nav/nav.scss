@@ -9,7 +9,7 @@
     background-color: $background;
     @include mobile {
         padding: 50px 0 116px 0px;
-        z-index: 2;        
+        z-index: 9;        
     }
 
     &__logo{

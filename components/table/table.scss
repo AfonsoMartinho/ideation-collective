@@ -19,6 +19,9 @@
             align-items: flex-start;
             justify-content: space-between;
             width: 100%;
+            @include mobile{
+                flex-direction: column;
+            }
             &__header{
                 font-size: 36px;
                 line-height: 43px;
@@ -26,9 +29,16 @@
                 color: #FFFFFF;
                 min-width: 320px;
                 margin-top: 22px;
+                @include mobile{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
             &__rows{
                 min-width: calc(100% - 320px);
+                @include mobile{
+                    min-width: 100%;
+                }
                 &__row{
                     display: flex;
                     height: 58px;
@@ -43,6 +53,10 @@
                         line-height: 19px;
                         letter-spacing: 0.02em;
                         color: #FFFFFF;
+                        @include mobile{
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
                     }
                     &__column2{
                         border-left: 1px solid #C4C4C4;
@@ -58,6 +72,13 @@
                         display: flex;
                         align-items: center;
                         justify-content: flex-end;
+                        @include mobile{
+                            border-left: none;
+                            min-width: 80px;
+                            font-weight: 600;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
 
                         span{
                             font-size: 14px;
@@ -66,6 +87,11 @@
                             letter-spacing: 0.02em;
                             margin-right: 10px;
                             color: #776AF6;
+                            @include mobile{
+                                font-weight: 600;
+                                font-size: 14px;
+                                line-height: 17px;
+                            }
                         }
                     }
                 }

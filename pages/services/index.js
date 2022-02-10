@@ -53,7 +53,7 @@ const consultancyData = [
             <div className={`${rootClassName}__services-showcase`}>
                 <div className={`${rootClassName}__services-showcase__service left`}>
                     <div className={`${rootClassName}__services-showcase__service__heading`}>
-                        <span className={`${rootClassName}__services-showcase__service__heading__text`}>services</span>
+                        <span className={`${rootClassName}__services-showcase__service__heading__text first`}>services</span>
                         <span className={`${rootClassName}__services-showcase__service__heading__text`}>01</span>
                         <span className={`${rootClassName}__services-showcase__service__heading__text`}>strategy</span>
                     </div>
@@ -68,7 +68,7 @@ const consultancyData = [
                 </div>
                 <div className={`${rootClassName}__services-showcase__service right`}>
                     <div className={`${rootClassName}__services-showcase__service__heading`}>
-                        <span className={`${rootClassName}__services-showcase__service__heading__text`}>services</span>
+                        <span className={`${rootClassName}__services-showcase__service__heading__text first`}>services</span>
                         <span className={`${rootClassName}__services-showcase__service__heading__text`}>02</span>
                         <span className={`${rootClassName}__services-showcase__service__heading__text`}>design development</span>
                     </div>
@@ -83,7 +83,7 @@ const consultancyData = [
                 </div>
                 <div className={`${rootClassName}__services-showcase__service left`}>
                     <div className={`${rootClassName}__services-showcase__service__heading`}>
-                        <span className={`${rootClassName}__services-showcase__service__heading__text`}>services</span>
+                        <span className={`${rootClassName}__services-showcase__service__heading__text first`}>services</span>
                         <span className={`${rootClassName}__services-showcase__service__heading__text`}>03</span>
                         <span className={`${rootClassName}__services-showcase__service__heading__text`}>consultancy</span>
                     </div>

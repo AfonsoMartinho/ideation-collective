@@ -20,14 +20,21 @@
             align-items: center;
             @include mobile {
                 font-size: 50px;
-                line-height: 100px;
+                line-height: 70px;
+                margin: 0;
+                padding: 0;
+                margin-top: 15px;
+
+                img{
+                    // margin-top: 20px;
+                }
                 &.no-wrap{
                     flex-wrap: nowrap;
                     letter-spacing: 0;
                     justify-content: space-between;
                     img{
                         height: 80px;
-                        padding: 0 0 0 0px;
+                        padding: 10px 0 0 0px;
                     }
                 }
             }
@@ -51,7 +58,7 @@
                 @include mobile {
                     height: 80px;
                     padding: 0;
-                    margin-top: 20px;
+                    margin-top: 40px;
                 }
             }
         }
@@ -120,6 +127,7 @@
         margin-bottom: 258px;
         @include mobile{
             margin-top: 95px;
+            margin-bottom: 0;
         }
         &__title{
             color: $purple;
@@ -183,7 +191,7 @@
                 padding: 0 50px;
                 @include mobile {
                     height: 60px;
-                    padding: 0 0 0 30px;
+                    padding: 0 0 0 15px;
                 }
             }
 
@@ -192,7 +200,7 @@
                 padding: 0 50px 0 0;
                 @include mobile {
                     height: 60px;
-                    padding: 0 0 0 30px;
+                    padding: 0 0 0 15px;
                 }
             }
 
@@ -201,7 +209,7 @@
                 padding: 0 50px;
                 @include mobile {
                     height: 60px;
-                    padding: 0 0 0 30px;
+                    padding: 0 0 0 15px;
                 }
             }
         }

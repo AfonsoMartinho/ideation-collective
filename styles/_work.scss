@@ -6,15 +6,36 @@
         line-height: 55px;
         text-align: center;
         letter-spacing: 0.02em;
+        @include mobile{
+            font-size: 32px;
+            line-height: 38px;
+            text-align: center;
+        }
     }
     &__tags{
         margin-top: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
+        @include mobile{
+            position: sticky;
+            top: 160px;
+            max-width: 350px;
+            flex-wrap: wrap;
+            z-index: 2;
+            background-color: $background;
+            padding-top: 10px;
+        }
         .tag{
             margin: 0 10px;
             cursor: pointer;
+            @include mobile{
+                margin-bottom: 10px;
+                span{
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+            }
         }
     }
    &__case-studies{
@@ -29,6 +50,9 @@
             flex-wrap: wrap;
             justify-content: flex-start;
             align-items: center;
+            @include mobile{
+                width: 100%;
+            }
             .case-study{
                 // transition: all 0.3s ease;
                 // display: none;
