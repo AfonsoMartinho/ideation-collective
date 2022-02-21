@@ -7,9 +7,11 @@
     position: sticky;
     top: 0;
     background-color: $background;
+    z-index: 9;  
     @include mobile {
         padding: 50px 0 116px 0px;
-        z-index: 9;        
+    }
+    @include tablet {
     }
 
     &__logo{

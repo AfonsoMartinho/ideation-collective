@@ -94,4 +94,7 @@
     @include mobile{
         --gutter: 0px; // space between cards
     }
+    @include tablet{
+        --gutter: 120px; // space between cards
+    }
 }

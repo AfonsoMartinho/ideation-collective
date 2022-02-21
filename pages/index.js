@@ -135,7 +135,7 @@ export default function Home() {
                 <div className={`${rootClassName}__case-studies__list__case`}>
                   <img className={`${rootClassName}__case-studies__list__case__logo`} src="assets/olie-logo.png" alt="olie" />
                   <div className={`${rootClassName}__case-studies__list__case__content`}>
-                    <div className={`${rootClassName}__case-studies__list__case__content__text`}>How we designed a <strong>voice-activated app</strong> that allows users to speak with their groups on-the.go.</div>
+                    <div className={`${rootClassName}__case-studies__list__case__content__text`}>How we designed a <strong>voice-activated app</strong> that allows users to speak with their groups on-the go.</div>
                     <div className={`${rootClassName}__case-studies__list__case__content__tags`}>
                       <Tag className={`${rootClassName}__case-studies__list__case__content__tags__tag`}>Strategy</Tag>
                       <Tag className={`${rootClassName}__case-studies__list__case__content__tags__tag`}>Design Development</Tag>

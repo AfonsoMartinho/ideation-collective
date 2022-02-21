@@ -38,6 +38,10 @@
                     }
                 }
             }
+            @include tablet {
+                font-size: 80px;
+                line-height: 140px;
+            }
             &__gif1{
                 height: 103px;
                 padding: 0 50px;
@@ -117,6 +121,13 @@
             padding: 0 50px;
             margin-top: 60px;
         }
+
+        @include tablet{
+            font-size: 28px;
+            line-height: 34px;
+            padding: 100px 200px 0 200px;
+
+        }
     }
 
     &__testimonials{
@@ -186,6 +197,10 @@
                 flex-wrap: wrap;
                 margin-top: 18px;
             }
+            @include tablet{
+                font-size: 72px;
+                line-height: 140px;
+            }
             &__gif1{
                 height: 103px;
                 padding: 0 50px;
@@ -242,6 +257,11 @@
                     width: 160px;
                 }
             }
+            @include tablet{
+                img{
+                    width: 160px;
+                }
+            }
             &__title{
                 font-size: 24px;
                 line-height: 27px;
@@ -252,6 +272,10 @@
                     line-height: 19px;
                     letter-spacing: 0.02em;
                     margin-top: 30px;
+                }
+                @include tablet{
+                    font-size: 20px;
+                    line-height: 24px;
                 }
             }
         }
@@ -280,6 +304,11 @@
                 line-height: 24px;
                 text-align: center;
             }
+            @include tablet{
+                font-size: 28px;
+                line-height: 45px;
+                margin-bottom: 60px;
+            }
         }
     }
 
@@ -299,6 +328,9 @@
             @include mobile{
                 font-size: 14px;
                 line-height: 17px;
+            }
+            @include tablet{
+                margin-bottom: 15px;
             }
         }
         &__subtitle{
@@ -328,10 +360,18 @@
                 flex-direction: column;
                 margin-top: 20px;
             }
+            @include tablet{
+                margin-top: 30px;
+            }
             &__case{
-                width: 50%;
+                width: 100%;
                 display: flex;
                 @include mobile{
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 40px;
+                }
+                @include tablet{
                     flex-direction: column;
                     width: 100%;
                     margin-top: 40px;
@@ -343,12 +383,19 @@
                         width: 100%;
                         height: auto;
                     }
+                    @include tablet{
+                        width: 452px;
+                        height: 452px;
+                    }
                 }
                 &__content{
                     margin-left: 30px;
                     margin-right: 10px;
                     @include mobile{
                         margin: 0;
+                    }
+                    @include tablet{
+                        margin-left: 0;
                     }
                     &__text{
                         margin-top: 65px;
@@ -360,6 +407,10 @@
                             font-size: 16px;
                             line-height: 24px;
                             margin: 30px 0 20px 0;
+                        }
+                        @include tablet{
+                            font-size: 20px;
+                            line-height: 26px;
                         }
                     }
                     &__tags{

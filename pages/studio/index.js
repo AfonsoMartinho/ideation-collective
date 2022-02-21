@@ -47,13 +47,13 @@ export default function Studio() {
               <div className={`${rootClassName}__gif__row`}>
                 <img className={`${rootClassName}__gif__row__image left hide-mobile`} src="/assets/studio8.png"></img>
                 <span> human centered </span>
-                <img className={`${rootClassName}__gif__row__imagem hide-mobile`} src="/assets/studio9.png"></img>
+                <img className={`${rootClassName}__gif__row__image hide-mobile`} src="/assets/studio9.png"></img>
               </div>
               <div className={`${rootClassName}__gif__row`}>
                 <img className={`${rootClassName}__gif__row__image left hide-desktop`} src="/assets/studio9.png"></img>
                 <span> and this </span>
                 <img className={`${rootClassName}__gif__row__image hide-mobile`} src="/assets/studio10.png"></img>
-                <img className={`${rootClassName}__gif__row__image left hide-mobile `} src="/assets/studio10.png"></img>
+                <img className={`${rootClassName}__gif__row__image right hide-desktop `} src="/assets/studio10.png"></img>
                 <span className="hide-mobile"> is our</span>
                 {/* <img className={`${rootClassName}__gif__row__image hide-desktop`} src="/assets/studio11.png"></img> */}
               </div>
@@ -76,7 +76,7 @@ export default function Studio() {
             <div className={`${rootClassName}__final-imgs`}>
                 <img className={`${rootClassName}__final-imgs__studio5 hide-mobile`} src="/assets/studio5.png" alt="" />
                 <img className={`${rootClassName}__final-imgs__studio6`} src="/assets/studio6.png" alt="" />
-                <div className={`${rootClassName}__final-imgs__studio5`}>
+                <div className={`${rootClassName}__final-imgs__studio5 hide-desktop`}>
                     <img className={`${rootClassName}__final-imgs__studio5 hide-desktop img`} src="/assets/studio5.png" alt="" />
                 </div>
             </div>

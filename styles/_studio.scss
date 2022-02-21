@@ -135,6 +135,9 @@
                     margin-left: 0;
                     margin-top: 20px;
                 }
+                &.right{
+                    margin-right: 0;
+                }
             }
         }
     }
@@ -146,9 +149,14 @@
         margin-top: 140px;
         width: 100%;
         display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: flex-end;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        @include mobile{
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
         &__studio5{
             width: 409px;
             height: 100%;
