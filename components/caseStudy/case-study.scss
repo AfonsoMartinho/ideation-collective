@@ -3,6 +3,23 @@
     height: 411px;
     position: relative;
     cursor: pointer;
+    transition: background, 0.5s, ease-in-out;
+    &:hover{
+        &::after{
+            transition: all, 0.5s, ease-in-out;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            background: url('/assets/hover-case-study.png');
+            background-repeat: no-repeat;
+            background-size: 60%;
+            background-position: center;	
+
+        }
+    }
     &.olie{
         background-image: url('/assets/olie-case.png');
         background-size: 100%;

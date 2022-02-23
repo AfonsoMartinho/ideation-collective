@@ -2,6 +2,8 @@
     width: 330px;
     min-height: 317px;
     position: relative;
+    cursor: url('/assets/cursor-case-study.png'), auto;	
+
     @include mobile{
         width: 240px;
         min-height: 240px;
