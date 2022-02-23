@@ -46,8 +46,8 @@ const consultancyData = [
                 <LottieAnimation loop={true} autoplay={true} animation={animationData} />
             </div>
             <div className={`${rootClassName}__title`}>
-                We love <span>co-creating</span> ideas for <br />
-                the <span>digital market</span> and presenting <br />
+                We love <strong>co-creating</strong> ideas for <br />
+                the <strong>digital market</strong> and presenting <br />
                 them to our customers. <br />
             </div>
             <div className={`${rootClassName}__services-showcase`}>
