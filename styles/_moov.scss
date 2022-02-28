@@ -95,15 +95,15 @@
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;
+            .tag{
+                height: 28px;
+            }
             @include mobile{
                 width: 100%;
                 margin-top: 20px;
                 align-items: flex-start;
                 justify-content: space-around;
                 height: 180px;
-                .tag{
-                    height: 28px;
-                }
             }
         }
     }
@@ -141,6 +141,25 @@
         }
         &__img{
             margin-top: 180px;
+            position: relative;
+            &__logo{
+                width: 157px;
+                height: 66px;
+                background: url('/assets/moov-logo-small.png');
+                background-position: center;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                position: absolute;
+                left: 460px;
+                top: 0;
+                @include mobile{
+                    width: 60px;
+                    height: 25px;
+                    left: 176px;
+
+                }
+
+            }
             @include mobile{
                 width: 100%;
                 margin-top: 80px;

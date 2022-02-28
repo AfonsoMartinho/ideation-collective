@@ -87,7 +87,7 @@ export default function Studio() {
                      problems.
                 </div>
                 <div className={`${rootClassName}__final-words__btn`}>
-                    <Button>our services</Button>
+                    <Button onClick={()=>{  window.location.href='services' } }>our services</Button>
                 </div>
             </div>
         </div>

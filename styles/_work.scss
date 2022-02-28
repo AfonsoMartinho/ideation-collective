@@ -9,6 +9,7 @@
         @include mobile{
             font-size: 32px;
             line-height: 38px;
+            margin-top: 50px;
         }
         @include tablet{
             font-size: 40px;
@@ -86,10 +87,10 @@
        }
        @keyframes fadeIn{
             0%{
-                transform: scale(0.5);
+                opacity: 0.5;
             }
             100%{
-                transform: scale(1);
+                opacity: 1;
             }
         }
         @keyframes fadeOut{

@@ -2,7 +2,11 @@
     width: 330px;
     min-height: 317px;
     position: relative;
-    cursor: url('/assets/cursor-case-study.png'), auto;	
+    cursor: url("/assets/cursor-case-study.png"), pointer;
+        cursor: -webkit-image-set(
+            url('/assets/cursor-case-study.png') 8x,
+            url('/assets/cursor-case-study.png') 8x
+        ), pointer;	
 
     @include mobile{
         width: 240px;

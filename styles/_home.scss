@@ -3,6 +3,7 @@
     height: $contentHeight;
     @include mobile {
         padding: 0;
+        margin-top: 50px;
     }
     &__title{
         width: 100%;
@@ -31,10 +32,11 @@
                 &.no-wrap{
                     flex-wrap: nowrap;
                     letter-spacing: 0;
-                    justify-content: space-between;
+                    justify-content: flex-start;
                     img{
                         height: 80px;
-                        padding: 10px 0 0 0px;
+                        padding: 0;
+                        margin-left: 10px;
                     }
                 }
             }
@@ -91,8 +93,11 @@
         align-items: center;
         justify-content: center;
         margin-top: 100px;
-        // cursor: pointer;
-        cursor: url("/assets/cursor-work.png"), pointer;	
+        cursor: url("/assets/cursor-work.png"), pointer;
+        cursor: -webkit-image-set(
+            url('/assets/cursor-work.png') 3x,
+            url('/assets/cursor-work.png') 3x
+        ), pointer;	
         &__img{
             width: 100%;
             // cursor: url("/assets/cursor-work.png"), auto;	

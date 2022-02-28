@@ -37,6 +37,7 @@ export default function Moov() {
                 </div>
                 <div className={`${rootClassName}__final__img`}>
                     <img src="../assets/moov-ideation.png" alt="moov-ideation" />
+                    <div className={`${rootClassName}__final__img__logo`}/>
                 </div>
             </div>
 

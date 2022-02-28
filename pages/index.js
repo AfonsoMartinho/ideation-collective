@@ -38,12 +38,12 @@ export default function Home() {
               <span><strong>remarkable customer experience.</strong></span>
             </div>
             <div className={`${rootClassName}__image-showcase`}>
-             <img className={`${rootClassName}__image-showcase__img`} src="/assets/home-page1.png" alt="ideation-showcase" />
+             <img className={`${rootClassName}__image-showcase__img`} onClick={()=>{  window.location.href='work' } } src="/assets/home-page1.png" alt="ideation-showcase" />
             </div>
             <div className={`${rootClassName}__studio-showcase`}>
               <span className={`${rootClassName}__studio-showcase__text1`}>We work with a <strong>diverse team</strong>  of <strong>talented</strong> individuals that work closely with <strong>our clients</strong>  to solve <strong>complex</strong> problems.</span>
               <span className={`${rootClassName}__studio-showcase__text2`}>Our approach blends user needs with experience design to <strong>build meaningful</strong> products, services and brands that are easily understood, useful, narratively driven and delightful.</span>
-              <Button className={`${rootClassName}__studio-showcase__button`}>know the studio</Button>
+              <Button onClick={()=>{  window.location.href='studio' } } className={`${rootClassName}__studio-showcase__button`}>know the studio</Button>
             </div>
             <div className={`${rootClassName}__testimonials`}>
               <span className={`${rootClassName}__testimonials__title`}>testimonials</span>
@@ -54,7 +54,8 @@ export default function Home() {
                     <TestimonialCard 
                       logoSrc="assets/portoBSchool.svg"
                       name="Diogo Pinto"
-                      position="Innovation Coordinator">
+                      position="Innovation Coordinator"
+                      onClick={()=>{  window.location.href='work' } }>
                         <div>Always ready an available to help at a very professional level. We ran a workshop design thinking together and <strong>it was a success</strong>!</div>
                       </TestimonialCard>
                   </li>  
@@ -62,7 +63,8 @@ export default function Home() {
                     <TestimonialCard 
                       logoSrc="assets/olie.png"
                       name="Vítor Leles"
-                      position="Innovation & Coordinator">
+                      position="Innovation & Coordinator"
+                      onClick={()=>{  window.location.href='work' } }>
                         <div>Ideation Collective is the design thinking agency that helped us define our brand and made us aware of the <strong>business possibilities</strong> within our industry.</div>
                       </TestimonialCard>
                   </li>
@@ -70,7 +72,8 @@ export default function Home() {
                     <TestimonialCard 
                       logoSrc="assets/urban.png"
                       name="Francisco Castro"
-                      position="Business Development Manager">
+                      position="Business Development Manager"
+                      onClick={()=>{  window.location.href='work' } }>
                         <div>Ideation Collective is the design thinking agency that helped us define our brand and made us aware of the <strong>business possibilities</strong> within our industry.</div>
                       </TestimonialCard>
                   </li>
@@ -78,7 +81,8 @@ export default function Home() {
                     <TestimonialCard 
                       logoSrc="assets/run.png"
                       name="Vítor Leles"
-                      position="Founder & CEO">
+                      position="Founder & CEO"
+                      onClick={()=>{  window.location.href='work' } }>
                         <div>Ideation Collective is the design thinking agency that helped us define our brand and made us aware of the <strong>business possibilities</strong> within our industry.</div>
                       </TestimonialCard>
                   </li>
@@ -88,25 +92,25 @@ export default function Home() {
             <div className={`${rootClassName}__mission`}>
               <div className={`${rootClassName}__mission__row`}>
                 <span>We love</span>
-                <img className={`${rootClassName}__mission__row__gif1`} src="assets/title1.gif"></img>
+                <img className={`${rootClassName}__mission__row__gif1`} src="assets/home-page2.png"></img>
                 <span className="hide-mobile">co-creating</span>
-                <img className={`hide-mobile ${rootClassName}__mission__row__gif2 hide-desktop`} src="assets/title1.gif"></img>
+                <img className={`hide-mobile ${rootClassName}__mission__row__gif2 hide-desktop`} src="assets/home-page2.png"></img>
               </div>
               <div className={`${rootClassName}__mission__row`}>
                 <span className="hide-desktop">co-creating</span>
-                <img className={`hide-desktop ${rootClassName}__mission__row__gif2 hide-desktop`} src="assets/title1.gif"></img>
+                <img className={`hide-desktop ${rootClassName}__mission__row__gif2 hide-desktop`} src="assets/home-page3.png"></img>
               </div>
               <div className={`${rootClassName}__mission__row`}>
-                <img className={`${rootClassName}__mission__row__gif2 hide-mobile`} src="assets/title1.gif"></img>
+                <img className={`${rootClassName}__mission__row__gif2 hide-mobile`} src="assets/home-page3.png"></img>
                 <span> for the </span>
-                <img className={`${rootClassName}__mission__row__gif3`} src="assets/title1.gif"></img>
+                <img className={`${rootClassName}__mission__row__gif3`} src="assets/home-page4.png"></img>
                 <span className="hide-mobile"> digital</span>
               </div>
               <div className={`${rootClassName}__mission__row`}>
                 <span className="hide-desktop"> digital &nbsp;</span>
                 <span> market.</span>
               </div>
-              <Button className={`${rootClassName}__mission__button`}>our services</Button>
+              <Button onClick={()=>{  window.location.href='services' } } className={`${rootClassName}__mission__button`}>our services</Button>
             </div>
             <div className={`${rootClassName}__services`}>
               <div className={`${rootClassName}__services__service`}>
@@ -129,7 +133,7 @@ export default function Home() {
               <div className={`${rootClassName}__case-studies__title`}>featured case studies</div>
               <div className={`${rootClassName}__case-studies__subtitle`}>
                 <div className={`${rootClassName}__case-studies__subtitle__text`}>We’re proud to have worked with <br className="hide-mobile"/> these <strong>incredible</strong> companies.</div>
-                <div className={`${rootClassName}__case-studies__subtitle__button hide-mobile`}> <Button>see all projects</Button> </div>
+                <div className={`${rootClassName}__case-studies__subtitle__button hide-mobile`}> <Button onClick={()=>{  window.location.href='work' } }>see all projects</Button> </div>
               </div>
               <div className={`${rootClassName}__case-studies__list`}>
                 <div className={`${rootClassName}__case-studies__list__case`}>
