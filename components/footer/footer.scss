@@ -46,6 +46,17 @@
         &__location{
             margin-top: 10px;
         }
+        &__mail a{
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                color: $purple;
+            }
+
+            &.active{
+                color: $purple;
+            }
+        }
         &__links{
             width: 450px;
             display: flex;
