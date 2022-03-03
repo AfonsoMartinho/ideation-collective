@@ -40,6 +40,19 @@
             bottom: 3px;
         }
     }
+    &:active{
+        // filter: invert(75%);   
+        // filter: hue-rotate(90deg)
+        &::before{
+            background: $gradient
+        }
+        & span{
+            color: $background !important;
+            -webkit-background-clip: none;
+            background-clip: none;
+            -webkit-text-fill-color: $background;
+        }
+    }
     span{
         height: auto;
         width: auto;
