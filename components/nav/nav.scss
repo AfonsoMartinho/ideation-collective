@@ -17,6 +17,10 @@
     @include tablet {
     }
 
+    .button{
+        min-width: 125px;
+    }
+
     &__logo{
         width: 104px;
         height: 35px;
