@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_tags_categories",
+  "info": {
+    "displayName": "Category",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "DesignDevelopment": {
+      "type": "boolean"
+    },
+    "DesignStrategy": {
+      "type": "boolean"
+    },
+    "Strategy": {
+      "type": "boolean"
+    }
+  }
+}

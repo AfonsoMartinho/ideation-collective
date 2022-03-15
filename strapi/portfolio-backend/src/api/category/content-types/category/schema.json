@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "categories",
+  "info": {
+    "singularName": "category",
+    "pluralName": "categories",
+    "displayName": "Category"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DesignStrategy": {
+      "type": "string"
+    }
+  }
+}
