@@ -54,7 +54,7 @@
         "audios"
       ]
     },
-    "Title": {
+    "title": {
       "type": "string"
     },
     "Years": {
@@ -63,10 +63,13 @@
     "Website": {
       "type": "string"
     },
-    "Category": {
-      "type": "component",
-      "repeatable": true,
-      "component": "tags.category"
+    "slug": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
     }
   }
 }

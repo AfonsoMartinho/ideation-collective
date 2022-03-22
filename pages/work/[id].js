@@ -1,17 +1,15 @@
 /* eslint-disable react/jsx-key */
 
-import Tag from "../../../components/tag";
+import Tag from "../../components/tag";
 import fetchFromCMS from "/lib/service";
 
-export default function Moov({ projectItems }) {
-    console.log(projectItems)
+export default function Project({ project }) {
     const rootClassName = 'ic-moov-wrapper'
-    const project = projectItems.data[0].attributes
-    console.log('HEY',project)
+    project = project.data.attributes
     return (
             <div className={rootClassName}>
                 <div className={`${rootClassName}__title`}>
-                    <div className={`${rootClassName}__title__name`}>{project.Title}</div>
+                    <div className={`${rootClassName}__title__name`}>{project.title}</div>
                     <div className={`${rootClassName}__title__text`}>{project.Description} </div>
                     <div className={`${rootClassName}__title__details`}>
                         <div className={`${rootClassName}__title__details__date`}>{project.Years}</div>
@@ -50,10 +48,24 @@ export default function Moov({ projectItems }) {
     );
 }
 
-export async function getStaticProps() {
-    const projectItems = await fetchFromCMS('projects');
-    return {
-      props: { projectItems },
+export async function getStaticPaths() {
+    const projects = await fetchFromCMS('projects');
+    console.log('SlugID', projects)
+  return {
+      paths: projects.data.map((project) => ({
+        // console.log('SlugID', project.id)
+        params: {
+          id: JSON.stringify(project.id),
+        },
+      })),
+      fallback: false,
+    };
+  }
+
+  export async function getStaticProps({ params }) {
+    const project = await fetchFromCMS(`projects/${params.id}`);
+  return {
+      props: { project: project },
       revalidate: 1,
     };
   }

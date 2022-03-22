@@ -1,10 +1,8 @@
 import Tag from "../../components/tag";
 import CaseStudy from "../../components/caseStudy";
 import {useState, useEffect} from "react";
-import fetchFromCMS from "/lib/service";
 
-export default function Work({ projectsItems }) {
-  console.log('STRAPI',projectsItems)
+export default function Moov() {
   const rootClassName = 'ic-work-wrapper'
   let allCaseStudies = [];
   const [casesToShow, setCasesToShow] = useState([])
@@ -68,38 +66,38 @@ export default function Work({ projectsItems }) {
     //   }
   }
 
-  // useEffect(() => {
-  //   allCaseStudies = document.querySelectorAll('.case-study');
-  //   for (const caseStudy of allCaseStudies) {
-  //       if(activeTag === 'All') {
-  //         // caseStudy.style.display = "flex";
-  //         caseStudy.classList.add("show");
-  //         caseStudy.classList.remove("hide");
+  useEffect(() => {
+    allCaseStudies = document.querySelectorAll('.case-study');
+    for (const caseStudy of allCaseStudies) {
+        if(activeTag === 'All') {
+          // caseStudy.style.display = "flex";
+          caseStudy.classList.add("show");
+          caseStudy.classList.remove("hide");
 
-  //         setCasesToShow([...casesToShow, caseStudy])
-  //       } else {
-  //         const tags = caseStudy.dataset.tags;
-  //         if(tags.includes(activeTag)) {
-  //           setCasesToShow([...casesToShow, caseStudy])
-  //           // caseStudy.style.display = "flex";
-  //           caseStudy.classList.add("show");
-  //           caseStudy.classList.remove("hide");
+          setCasesToShow([...casesToShow, caseStudy])
+        } else {
+          const tags = caseStudy.dataset.tags;
+          if(tags.includes(activeTag)) {
+            setCasesToShow([...casesToShow, caseStudy])
+            // caseStudy.style.display = "flex";
+            caseStudy.classList.add("show");
+            caseStudy.classList.remove("hide");
 
-  //           // caseStudy.classList.remove("hide");
-  //         } else {
-  //           var casesArray = [...casesToShow]
-  //           setCasesToShow(casesArray.filter(item => item !== caseStudy));
-  //           caseStudy.classList.add("hide");
-  //           caseStudy.classList.remove("show");
-  //           // caseStudy.style.display = "none";
+            // caseStudy.classList.remove("hide");
+          } else {
+            var casesArray = [...casesToShow]
+            setCasesToShow(casesArray.filter(item => item !== caseStudy));
+            caseStudy.classList.add("hide");
+            caseStudy.classList.remove("show");
+            // caseStudy.style.display = "none";
 
-  //           // caseStudy.classList.remove("show");
-  //           // caseStudy.classList.add("hide");
-  //         }
-  //     }
-  // }
+            // caseStudy.classList.remove("show");
+            // caseStudy.classList.add("hide");
+          }
+      }
+  }
     
-  // },[showMe]);
+  },[showMe]);
 
   return (
       <div className={rootClassName}>
@@ -116,25 +114,15 @@ export default function Work({ projectsItems }) {
           </div>
           <div className={`${rootClassName}__case-studies`}>
             <div className={`${rootClassName}__case-studies__content`}>
-            {projectsItems.data.map((project) => (
-              <CaseStudy key={project.id} projectID={project.id} project={project.attributes} data-tags={project.attributes.category}/>
-              // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="consult" data-tags={['Consultancy']}/>
-              // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="other" data-tags={['Strategy', 'Design Development']}/>
-              // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="lectures" data-tags={['Consultancy']}/>
-              // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="moov" data-tags={['Design Development']}/>
-              // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="eazup" data-tags={['Strategy', 'Design Development']}/>
-            ))}
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="olie" data-tags={['Strategy', 'Design Development']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="consult" data-tags={['Consultancy']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="other" data-tags={['Strategy', 'Design Development']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="lectures" data-tags={['Consultancy']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="moov" data-tags={['Design Development']}/>
+              <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="eazup" data-tags={['Strategy', 'Design Development']}/>
             </div>
           </div>
 
       </div>
   );
-}
-
-export async function getStaticProps() {
-  const projectsItems = await fetchFromCMS('projects');
-  return {
-    props: { projectsItems },
-    revalidate: 1,
-  };
 }

@@ -1,8 +1,8 @@
 {
-  "collectionName": "components_tags_categories",
+  "collectionName": "components_tags_cat_tests",
   "info": {
-    "displayName": "Category",
-    "icon": "ad",
+    "displayName": "catTEST",
+    "icon": "arrows-alt-v",
     "description": ""
   },
   "options": {},
