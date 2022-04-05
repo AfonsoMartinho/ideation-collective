@@ -18,3 +18,8 @@ module.exports = {
         ignoreDuringBuilds: true,
       },
 }
+// module.exports = {
+//     images: {
+//       domains: ['configs.STRAPI_DOMAIN'],
+//     },
+//   };

@@ -1,13 +1,13 @@
 import React from 'react'
 import Tag from "../tag";
-import Link from 'next/link';
+import Constants from '/constants.json'
 
 export default function caseStudy(props) {
     const rootClassName = 'case-study';
-    console.log('HEY', props['data-tags'])
     return (
         <div data-tags={props['data-tags']} className={`${rootClassName} ${props.className || ''}`} >
-            <Link as={`/work/${props.projectID}`} href="/work/[id]">OI</Link> 
+            <img src={`${Constants.STRAPI_DOMAIN}${props.project.Thumbnail.data.attributes.url}`} className={`${rootClassName}__thumbnail`} alt="thumbnail" />
+            <a as={`/work/${props.projectID}`} href={`/work/${props.projectID}`}>
                 { props['data-tags'] 
                 && (
                 <div className={`${rootClassName}__tags`}>
@@ -20,7 +20,8 @@ export default function caseStudy(props) {
                         })
                     }
                 </div>
-            ) }
+                ) }
+            </a>
         </div>
     )
 }

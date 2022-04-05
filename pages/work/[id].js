@@ -1,11 +1,12 @@
-/* eslint-disable react/jsx-key */
-
 import Tag from "../../components/tag";
 import fetchFromCMS from "/lib/service";
+import Constants from '/constants.json'
+
 
 export default function Project({ project }) {
     const rootClassName = 'ic-moov-wrapper'
     project = project.data.attributes
+    console.log(project)
     return (
             <div className={rootClassName}>
                 <div className={`${rootClassName}__title`}>
@@ -28,11 +29,10 @@ export default function Project({ project }) {
                     </div>
                 </div>
                 <div className={`${rootClassName}__gallery`}>
-                    <img src="../assets/moov1.png" alt="" />
-                    <img src="../assets/moov2.png" alt="" />
-                    <img src="../assets/moov3.png" alt="" />
-                    <img src="../assets/moov4.png" alt="" />
-                    <img src="../assets/moov5.png" alt="" />
+                  {project.Media.data.map( (image, index) =>{
+                    return(<img key={index} src={`${Constants.STRAPI_DOMAIN}${image.attributes.url}`} alt={image.attributes.name} />)  
+                  })
+                  }
                 </div>
                 <div className={`${rootClassName}__final`}>
                     <div className={`${rootClassName}__final__text`}>
@@ -40,7 +40,9 @@ export default function Project({ project }) {
                     </div>
                     <div className={`${rootClassName}__final__img`}>
                         <img src="../assets/moov-ideation.png" alt="moov-ideation" />
-                        <div className={`${rootClassName}__final__img__logo`}/>
+                        <div className={`${rootClassName}__final__img__logo`}>
+                          <img src={`${Constants.STRAPI_DOMAIN}${project.FinalLogo.data.attributes.url}`} alt="moov-ideation" />
+                        </div>
                     </div>
                 </div>
 
@@ -53,7 +55,6 @@ export async function getStaticPaths() {
     console.log('SlugID', projects)
   return {
       paths: projects.data.map((project) => ({
-        // console.log('SlugID', project.id)
         params: {
           id: JSON.stringify(project.id),
         },

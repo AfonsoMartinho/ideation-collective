@@ -3,10 +3,10 @@ import CaseStudy from "../../components/caseStudy";
 import {useState, useEffect} from "react";
 import fetchFromCMS from "/lib/service";
 
-export default function Work({ projectsItems }) {
-  console.log('STRAPI',projectsItems)
+export default function Work({ parsedProjects }) {
   const rootClassName = 'ic-work-wrapper'
   let allCaseStudies = [];
+  console.log(parsedProjects)
   const [casesToShow, setCasesToShow] = useState([])
   const [showMe, setShowMe] = useState(false);
   const [activeTag, setActiveTag] = useState('');
@@ -116,8 +116,8 @@ export default function Work({ projectsItems }) {
           </div>
           <div className={`${rootClassName}__case-studies`}>
             <div className={`${rootClassName}__case-studies__content`}>
-            {projectsItems.data.map((project) => (
-              <CaseStudy key={project.id} projectID={project.id} project={project.attributes} data-tags={project.attributes.category}/>
+            {parsedProjects.map((project) => (
+              <CaseStudy key={project.id} projectID={project.id} project={project.attributes} data-tags={project.categories}/>
               // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="consult" data-tags={['Consultancy']}/>
               // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="other" data-tags={['Strategy', 'Design Development']}/>
               // <CaseStudy onClick={()=>{  window.location.href='work/moov' } }caseName="lectures" data-tags={['Consultancy']}/>
@@ -133,8 +133,17 @@ export default function Work({ projectsItems }) {
 
 export async function getStaticProps() {
   const projectsItems = await fetchFromCMS('projects');
+  const parsedProjects = [];
+  projectsItems.data.forEach((project) => {
+    if (!project) return
+    parsedProjects.push({
+      id: project.id,
+      attributes: project.attributes,
+      categories: project.attributes.categories.data.map((category) => { return(category.attributes.tagName) })
+    })
+  });
   return {
-    props: { projectsItems },
+    props: { projectsItems, parsedProjects },
     revalidate: 1,
   };
 }
