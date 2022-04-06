@@ -12,6 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "MainColor": {
+      "type": "colorpicker",
+      "columnType": "string"
+    },
     "Logo": {
       "type": "media",
       "multiple": false,
