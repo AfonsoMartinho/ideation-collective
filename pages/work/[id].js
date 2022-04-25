@@ -10,7 +10,7 @@ export default function Project({ project }) {
     return (
             <div className={rootClassName}>
                 <div className={`${rootClassName}__title`}>
-                    <div className={`${rootClassName}__title__name`}>{project.title}</div>
+                    <div className={`${rootClassName}__title__name`}>{project.Title}</div>
                     <div className={`${rootClassName}__title__text`}>{project.Description} </div>
                     <div className={`${rootClassName}__title__details`}>
                         <div className={`${rootClassName}__title__details__date`}>{project.Years}</div>
