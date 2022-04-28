@@ -5,8 +5,10 @@ import Constants from '/constants.json'
 export default function caseStudy(props) {
     const rootClassName = 'case-study';
     return (
+        props.project
+        && (
         <div data-tags={props['data-tags']} className={`${rootClassName} ${props.className || ''}`} >
-            <img src={`${Constants.STRAPI_DOMAIN}${props.project.Thumbnail.data.attributes.url}`} className={`${rootClassName}__thumbnail`} alt="thumbnail" />
+            { props.project.Thumbnail.data && <img src={`${Constants.STRAPI_DOMAIN}${props.project.Thumbnail.data.attributes.url}`} className={`${rootClassName}__thumbnail`} alt="thumbnail" /> }
             <a as={`/work/${props.projectID}`} href={`/work/${props.projectID}`}>
                 { props['data-tags'] 
                 && (
@@ -23,5 +25,6 @@ export default function caseStudy(props) {
                 ) }
             </a>
         </div>
+        )
     )
 }
