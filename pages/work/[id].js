@@ -64,7 +64,7 @@ export async function getStaticPaths() {
 
   export async function getStaticProps({ params }) {
     const projectItem = await fetchFromCMS(`projects/${params.id}`);
-    const categories = projectItem.attributes.categories.data.map((category) => { return(category.attributes.tagName) });
+    const categories = projectItem.data.attributes.categories.data.map((category) => { return(category.attributes.tagName) });
       // projectItem.data.forEach((project) => {
       //   if (!project) return
       //   parsedProject.push({
