@@ -11,7 +11,7 @@ export default function Layout(props) {
             <Head>
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></link>
             </Head>
-            <Nav logoSrc="/assets/logo.png">
+            <Nav logoSrc="/assets/logo.svg">
                 <a href="/work" className={router.pathname == "/work" ? "active" : ""}>work</a>
                 <a href="/studio" className={router.pathname == "/studio" ? "active" : ""}>studio</a>
                 <a href="/services" className={router.pathname == "/services" ? "active" : ""}>services</a>

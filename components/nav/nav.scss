@@ -32,10 +32,9 @@
         &:hover{
             height: 35px;
             width: 104px;
-            background-image: url('/assets/logo-hover.png');
+            background-image: url('/assets/logo-hover.svg');
             background-size: contain;
             background-repeat: no-repeat;
-            background-position-x: 4px;
             cursor: pointer;
             img{
                 opacity: 0;
