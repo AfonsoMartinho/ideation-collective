@@ -1,6 +1,6 @@
 import * as animationData from '../../public/assets/lottie/process.json'
 import dynamic from "next/dynamic";
-import ScrollText from "./scrollText.js";
+import ScrollTextMinor from "./scrollTextMinor.js";
 
 
 // import { Animator, ScrollPage, batch, Fade, Move, Sticky } from "react-scroll-motion";
@@ -24,7 +24,7 @@ export default function ProcessAnimation() {
         <div className={rootClassName}>
             <LottieScrollSection className={`${rootClassName}__lottie`} height={5000} animation={animationData} frames={[0, 720]} />
             <div className={`${rootClassName}__scrollable`}>
-                <ScrollText />
+                <ScrollTextMinor />
             {/* <ScrollSection snap="none">
                     <ScrollPage page={0}>
                         <Animator animation={FadeUp}>
