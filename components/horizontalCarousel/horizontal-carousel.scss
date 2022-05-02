@@ -14,18 +14,18 @@
         margin: 0;
         display: grid;
         grid-gap: calc(var(--gutter) / 2);
-        grid-template-columns: repeat(4, calc(50% - var(--gutter) * 2)); // change 4 for the number of items
+        grid-template-columns: repeat(3, calc(50% - var(--gutter) * 2)); // change 3 for the number of items
         grid-template-rows: minmax(150px, 1fr);
         
-        overflow-x: scroll;
         scroll-snap-type: x proximity;
         padding-bottom: calc(.75 * var(--gutter));
         margin-bottom: calc(-.25 * var(--gutter));
         list-style: none;
         padding: 0;
         @include mobile{
+            overflow-x: scroll;
             height: 270px;
-            grid-template-columns: repeat(4, calc(78% - var(--gutter) * 2)); // change 4 for the number of items            
+            grid-template-columns: repeat(3, calc(78% - var(--gutter) * 2)); // change 3 for the number of items            
         }
         div{
             width: 310px;

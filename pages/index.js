@@ -63,9 +63,9 @@ export default function Home() {
                     <TestimonialCard 
                       logoSrc="assets/olie.png"
                       name="Vítor Leles"
-                      position="Innovation & Coordinator"
+                      position="Founder & CEO"
                       onClick={()=>{  window.location.href='work' } }>
-                        <div>Ideation Collective is the design thinking agency that helped us define our brand and made us aware of the <strong>business possibilities</strong> within our industry.</div>
+                        <div>Ideation Collective helped us define our product design and made us aware of the <strong>business possibilities</strong> within our industry.</div>
                       </TestimonialCard>
                   </li>
                   <li>
@@ -74,16 +74,7 @@ export default function Home() {
                       name="Francisco Castro"
                       position="Business Development Manager"
                       onClick={()=>{  window.location.href='work' } }>
-                        <div>Ideation Collective is the design thinking agency that helped us define our brand and made us aware of the <strong>business possibilities</strong> within our industry.</div>
-                      </TestimonialCard>
-                  </li>
-                  <li>
-                    <TestimonialCard 
-                      logoSrc="assets/run.png"
-                      name="Vítor Leles"
-                      position="Founder & CEO"
-                      onClick={()=>{  window.location.href='work' } }>
-                        <div>Ideation Collective is the design thinking agency that helped us define our brand and made us aware of the <strong>business possibilities</strong> within our industry.</div>
+                        <div>Easy to work with, we had a great time co-creating our website and <strong> our business grew 32% </strong> since the website launched.</div>
                       </TestimonialCard>
                   </li>
                 </HorizontalCarousel>                
