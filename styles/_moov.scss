@@ -145,12 +145,8 @@
             &__logo{
                 width: 157px;
                 height: 66px;
-                background: url('/assets/moov-logo-small.png');
-                background-position: center;
-                background-size: 100%;
-                background-repeat: no-repeat;
                 position: absolute;
-                left: 460px;
+                left: 440px;
                 top: 0;
                 @include mobile{
                     width: 60px;
