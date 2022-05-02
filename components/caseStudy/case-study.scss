@@ -46,6 +46,12 @@
         align-items: flex-end;
         justify-content: flex-start;
         z-index: 3;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+        @include tablet{
+            flex-wrap: wrap;
+        }
         &__tag{
             margin: 0 4px;
             background-color: #776AF6;

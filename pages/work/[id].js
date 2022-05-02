@@ -27,12 +27,14 @@ export default function Project({ project, categories }) {
                       ))}
                     </div>
                 </div>
-                <div className={`${rootClassName}__gallery`}>
-                  {project.Media.data.map( (image, index) =>{
-                    return(<img key={index} src={`${Constants.STRAPI_DOMAIN}${image.attributes.url}`} alt={image.attributes.name} />)  
-                  })
-                  }
-                </div>
+                { project.Media.data &&(
+                  <div className={`${rootClassName}__gallery`}>
+                    {project.Media.data.map( (image, index) =>{
+                      return(<img key={index} src={`${Constants.STRAPI_DOMAIN}${image.attributes.url}`} alt={image.attributes.name} />)  
+                    })
+                    }
+                  </div>
+                )}
                 <div className={`${rootClassName}__final`}>
                     <div className={`${rootClassName}__final__text`}>
                     {project.FinalWords}
@@ -67,7 +69,7 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
     const projectItem = await fetchFromCMS(`projects/${params.id}`);
     const categories = projectItem.data.attributes.categories.data.map((category) => { return(category.attributes.tagName) });
-    console.log("CATS", categories);
+    console.log("Project", projectItem.Media);
     // projectItem.data.forEach((project) => {
       //   if (!project) return
       //   parsedProject.push({
