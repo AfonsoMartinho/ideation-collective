@@ -58,6 +58,12 @@
             border: none;
             span{
                 color:#62F9BB;
+                @include tablet{
+                    font-size: 11px;
+                    line-height: 10px;
+                    letter-spacing: .02em;
+                    padding: 6px 6px;
+                }
             }
         }
     }
