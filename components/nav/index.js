@@ -45,9 +45,9 @@ export default function Nav(props) {
                         <span>From Porto, PT to  <strong>&nbsp;anywhere.</strong></span>
                       </div>
                       <div className={`${rootClassName}__nav-mobile__footer__social`}>
-                          <span>Linkedin</span>
-                          <span>Instagram</span>
-                          <span>Behance</span>
+                          <span><a className={`${rootClassName}__bottom__links__link`} target="_blank"  rel="noreferrer" href="https://www.linkedin.com/company/ideationcollective-pt/">Linkedin</a></span>
+                          <span><a className={`${rootClassName}__bottom__links__link`} target="_blank"  rel="noreferrer" href="https://www.instagram.com/ideation_collective/">Instagram</a></span>
+                          <span><a className={`${rootClassName}__bottom__links__link`} target="_blank"  rel="noreferrer" href="https://www.behance.net/ideation-collective">Behance</a></span>
                       </div>
                   </div> 
 

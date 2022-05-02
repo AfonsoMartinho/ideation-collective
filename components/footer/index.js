@@ -18,9 +18,9 @@ export default function Footer() {
                 </div>
                 <div className={`${rootClassName}__bottom__location`}>From Porto, PT to <strong>anywhere.</strong></div>
                 <div className={`${rootClassName}__bottom__links hide-desktop`}>
-                    <a className={`${rootClassName}__bottom__links__link`} href="#">Linkedin</a>
-                    <a className={`${rootClassName}__bottom__links__link`} href="#">Instagram</a>
-                    <a className={`${rootClassName}__bottom__links__link`} href="#">Behance</a>
+                    <a className={`${rootClassName}__bottom__links__link`} target="_blank"  rel="noreferrer" href="https://www.linkedin.com/company/ideationcollective-pt/">Linkedin</a>
+                    <a className={`${rootClassName}__bottom__links__link`} target="_blank"  rel="noreferrer" href="https://www.instagram.com/ideation_collective/">Instagram</a>
+                    <a className={`${rootClassName}__bottom__links__link`} target="_blank"  rel="noreferrer" href="https://www.behance.net/ideation-collective">Behance</a>
                 </div>
             </div>
         </div>
