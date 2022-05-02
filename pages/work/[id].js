@@ -21,11 +21,11 @@ export default function Project({ project, categories }) {
                     <div className={`${rootClassName}__description__text`}>
                     {project.Header}
                     </div>
-                    { categories.map((categorie, index) => (
-                      <div key={index} className={`${rootClassName}__description__tags`}>
-                          <Tag>{categorie}</Tag>
-                      </div>
-                    ))}
+                    <div className={`${rootClassName}__description__tags`}>
+                      { categories.map((categorie, index) => (
+                          <Tag key={index}>{categorie}</Tag>
+                      ))}
+                    </div>
                 </div>
                 <div className={`${rootClassName}__gallery`}>
                   {project.Media.data.map( (image, index) =>{
@@ -39,9 +39,11 @@ export default function Project({ project, categories }) {
                     </div>
                     <div className={`${rootClassName}__final__img`}>
                         <img src="../assets/moov-ideation.png" alt="moov-ideation" />
-                        <div className={`${rootClassName}__final__img__logo`}>
-                          <img src={`${Constants.STRAPI_DOMAIN}${project.FinalLogo.data.attributes.url}`} alt="moov-ideation" />
-                        </div>
+                        { project.FinalLogo.data &&(
+                          <div className={`${rootClassName}__final__img__logo`}>
+                            <img src={`${Constants.STRAPI_DOMAIN}${project.FinalLogo.data.attributes.url}`} alt="moov-ideation" />
+                          </div>
+                        )}
                     </div>
                 </div>
 
@@ -65,7 +67,8 @@ export async function getStaticPaths() {
   export async function getStaticProps({ params }) {
     const projectItem = await fetchFromCMS(`projects/${params.id}`);
     const categories = projectItem.data.attributes.categories.data.map((category) => { return(category.attributes.tagName) });
-      // projectItem.data.forEach((project) => {
+    console.log("CATS", categories);
+    // projectItem.data.forEach((project) => {
       //   if (!project) return
       //   parsedProject.push({
       //     id: project.id,
@@ -74,7 +77,7 @@ export async function getStaticPaths() {
       //   })
       // });
   return {
-      props: { project: projectItem, categories: categories },
+      props: { project: projectItem, categories: projectItem.data.attributes.categories.data.map((category) => { return(category.attributes.tagName) }) },
       revalidate: 1,
     };
   }
