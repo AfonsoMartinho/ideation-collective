@@ -15,11 +15,11 @@ export default function Nav(props) {
                     { props.children }
                 </div>
             ) }
-            <Button className="hide-mobile">book a call</Button>
+            <Button className="hide-mobile" onClick={()=>{  window.location.href='https://calendly.com/ideation-collective/discovery?month=2022-05' } }>book a call</Button>
             <div className={`${rootClassName}__mobile hide-desktop`}>
               <a href="/"><img src="/assets/logo-mobile.png" alt="logo" /></a>
               <div className={`${rootClassName}__mobile__left hide-desktop`}>
-                <Button>book a call</Button>
+                <Button onClick={()=>{  window.location.href='https://calendly.com/ideation-collective/discovery?month=2022-05' } }>book a call</Button>
                 <div className={`${rootClassName}__mobile__left__burger`}><img src="/assets/burger.png" alt="burger" onClick={()=> { setIsOpenMobile(true)}} /></div>
               </div>
             </div>
