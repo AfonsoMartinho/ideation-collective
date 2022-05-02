@@ -31,14 +31,6 @@ const consultancyData = [
     { title: 'UX Design Consulting', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
     { title: 'In-House Training', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
 ]
-// const lottieOptions = {
-//     loop: true,
-//     autoplay: true, 
-//     animationData: animationData,
-//     rendererSettings: {
-//       preserveAspectRatio: 'xMidYMid slice'
-//     }
-//   };
   return (
         <div className={rootClassName}>
             <div className={`${rootClassName}__banner`}>
@@ -101,7 +93,7 @@ const consultancyData = [
                  individuals that work closely with <strong> our</strong> <br />
                   clients to solve <strong>complex</strong> problems.
                 </div>
-                <div className={`${rootClassName}__table`}>
+                {/* <div className={`${rootClassName}__table`}>
                     <Table data={ {
                         title : 'Budget',
                         rows:{
@@ -122,7 +114,7 @@ const consultancyData = [
                             ]
                         }
                     } } />
-                </div>
+                </div> */}
 
 
             </div>
