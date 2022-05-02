@@ -1,5 +1,5 @@
 import Tag from "../../components/tag";
-import Accordion from "../../components/accordion";
+import AccordionClosed from "../../components/accordionClosed";
 import Table from "../../components/table";
 import dynamic from "next/dynamic";
 
@@ -13,23 +13,39 @@ const LottieAnimation = dynamic(
 
 export default function Services() {
   const rootClassName = 'ic-services-wrapper'
-  const strategyData = [
-      { title: 'User Experience', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-      { title: 'Brand Strategy & Architecture', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-      { title: 'Strategy', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-      { title: 'Discovery & Research', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
-  ]
-  const designData = [
-    { title: 'Website Design & Development', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-    { title: 'UX/UI Design', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-    { title: 'Information Architecture', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-    { title: 'Wireframing', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
+//   const strategyData = [
+//       { title: 'User Experience', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//       { title: 'Brand Strategy & Architecture', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//       { title: 'Strategy', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//       { title: 'Discovery & Research', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
+//   ]
+//   const designData = [
+//     { title: 'Website Design & Development', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//     { title: 'UX/UI Design', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//     { title: 'Information Architecture', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//     { title: 'Wireframing', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
+// ]
+// const consultancyData = [
+//     { title: 'Design-Driven Innovation', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//     { title: 'Design Thinking', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//     { title: 'UX Design Consulting', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
+//     { title: 'In-House Training', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
+// ]
+const strategyData = [
+    { title: 'User Experience' },
+    { title: 'Discovery & Research'},
+    { title: 'Product Strategy' }
+]
+const designData = [
+  { title: 'Website' },
+  { title: 'Product Design' },
+  { title: 'Prodcut Development' },
+  { title: 'Mobile App' }
 ]
 const consultancyData = [
-    { title: 'Design-Driven Innovation', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-    { title: 'Design Thinking', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-    { title: 'UX Design Consulting', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' },
-    { title: 'In-House Training', description: 'We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.' }
+  { title: 'Design Thinking' },
+  { title: 'UX Design Consulting' },
+  { title: 'In-House Training' }
 ]
   return (
         <div className={rootClassName}>
@@ -54,8 +70,8 @@ const consultancyData = [
                     </div>
                     <div className={`${rootClassName}__services-showcase__service__description`}>
                         <Tag className="active">Strategy</Tag>
-                        <div className={`${rootClassName}__services-showcase__service__description__text`}>We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.</div>
-                        <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><Accordion data={strategyData}/></div>                    
+                        <div className={`${rootClassName}__services-showcase__service__description__text`}>We discover and identify the key insights to help us solve complex problems, by co creating proofs of concept and validating them with users.</div>
+                        <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><AccordionClosed data={strategyData}/></div>                    
                     </div>
                 </div>
                 <div className={`${rootClassName}__services-showcase__service right`}>
@@ -69,8 +85,8 @@ const consultancyData = [
                     </div>
                     <div className={`${rootClassName}__services-showcase__service__description`}>
                         <Tag className="active">Design Development</Tag>
-                        <div className={`${rootClassName}__services-showcase__service__description__text`}>We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.</div>
-                        <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><Accordion data={designData}/></div>                    
+                        <div className={`${rootClassName}__services-showcase__service__description__text`}>We use scrum and agile methodlogies to create digital products that generate revenue channels and user retention.</div>
+                        <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><AccordionClosed data={designData}/></div>                    
                     </div>
                 </div>
                 <div className={`${rootClassName}__services-showcase__service left`}>
@@ -84,8 +100,8 @@ const consultancyData = [
                     </div>
                     <div className={`${rootClassName}__services-showcase__service__description`}>
                         <Tag className="active">Consultancy</Tag>
-                        <div className={`${rootClassName}__services-showcase__service__description__text`}>We identify and create digital products and services that create revenue channels and help brands thrive in the new economy.</div>
-                        <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><Accordion data={consultancyData}/></div>                    
+                        <div className={`${rootClassName}__services-showcase__service__description__text`}>We coach and train designers and design teams to become more strategic and uer-centered.</div>
+                        <div className={`${rootClassName}__services-showcase__service__description__accordiom`}><AccordionClosed data={consultancyData}/></div>                    
                     </div>
                 </div>
                 <div className={`${rootClassName}__final-words`}>
