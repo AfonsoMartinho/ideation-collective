@@ -3,7 +3,7 @@ import fetchFromCMS from "/lib/service";
 import Constants from '/constants.json'
 
 
-export default function Project({ project, parsedProject }) {
+export default function Project({ project, categories }) {
     const rootClassName = 'ic-moov-wrapper'
     project = project.data.attributes
     console.log(project)
@@ -21,7 +21,7 @@ export default function Project({ project, parsedProject }) {
                     <div className={`${rootClassName}__description__text`}>
                     {project.Header}
                     </div>
-                    { parsedProject.categories.map((categorie, index) => (
+                    { categories.map((categorie, index) => (
                       <div key={index} className={`${rootClassName}__description__tags`}>
                           <Tag>{categorie}</Tag>
                       </div>
@@ -64,17 +64,17 @@ export async function getStaticPaths() {
 
   export async function getStaticProps({ params }) {
     const projectItem = await fetchFromCMS(`projects/${params.id}`);
-    const parsedProject = [];
-      projectItem.data.forEach((project) => {
-        if (!project) return
-        parsedProject.push({
-          id: project.id,
-          attributes: project.attributes,
-          categories: project.attributes.categories.data.map((category) => { return(category.attributes.tagName) })
-        })
-      });
+    const categories = projectItem.attributes.categories.data.map((category) => { return(category.attributes.tagName) });
+      // projectItem.data.forEach((project) => {
+      //   if (!project) return
+      //   parsedProject.push({
+      //     id: project.id,
+      //     attributes: project.attributes,
+      //     categories: project.attributes.categories.data.map((category) => { return(category.attributes.tagName) })
+      //   })
+      // });
   return {
-      props: { project: projectItem, parsedProject: parsedProject },
+      props: { project: projectItem, categories: categories },
       revalidate: 1,
     };
   }
