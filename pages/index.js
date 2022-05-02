@@ -38,7 +38,7 @@ export default function Home() {
               <span><strong>remarkable customer experience.</strong></span>
             </div>
             <div className={`${rootClassName}__image-showcase`}>
-             <img className={`${rootClassName}__image-showcase__img`} onClick={()=>{  window.location.href='work' } } src="/assets/home-page1.png" alt="ideation-showcase" />
+             <img className={`${rootClassName}__image-showcase__img`} onClick={()=>{  window.location.href='work' } } src="/assets/home-page1.svg" alt="ideation-showcase" />
             </div>
             <div className={`${rootClassName}__studio-showcase`}>
               <span className={`${rootClassName}__studio-showcase__text1`}>We work with a <strong>diverse team</strong>  of <strong>talented</strong> individuals that work closely with <strong>our clients</strong>  to solve <strong>complex</strong> problems.</span>
