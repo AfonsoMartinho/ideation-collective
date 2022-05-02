@@ -7,7 +7,7 @@ export default function Footer() {
         <div className={rootClassName}>
             <div className={`${rootClassName}__top`}>
                 <div className={`${rootClassName}__top__title`}>Let’s <strong>ideate </strong> together. Book your call today.</div>
-                <Button className={`${rootClassName}__top__button`} onClick={()=>{  window.location.href='#' } }>book a call</Button>
+                <Button className={`${rootClassName}__top__button`} onClick={()=>{  window.location.href='https://calendly.com/ideation-collective/discovery?month=2022-05' } }>book a call</Button>
             </div>
             <div className={`${rootClassName}__bottom`}>
                 <div className={`${rootClassName}__bottom__mail`}> <a href="mailto:info@ideation-colective.com">info@ideation-collective.com</a></div>

@@ -38,7 +38,7 @@ export default function Nav(props) {
                   </div>
                   <div className={`${rootClassName}__nav-mobile__footer`}>
                       <div className={`${rootClassName}__nav-mobile__footer__button`}>
-                          <Button>book a call</Button>
+                          <Button onClick={()=>{  window.location.href='https://calendly.com/ideation-collective/discovery?month=2022-05' } }>book a call</Button>
                       </div>
                       <div className={`${rootClassName}__nav-mobile__footer__contacts`}>
                         <span>info@ideation-collective.com</span>
