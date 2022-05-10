@@ -4,18 +4,35 @@ import "../components/main.scss";
 // import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 // import { CSSPlugin } from 'gsap/CSSPlugin'
 import Layout from "../components/layout";
+import LoadingScreen from "../components/loadingScreen";
+import { useEffect, useState } from 'react';
+
 
 // gsap.registerPlugin(CSSPlugin)
 // gsap.registerPlugin(ScrollTrigger);
 
+
 if (typeof global.navigator === 'undefined') global.navigator = {};
 
 function MyApp({ Component, pageProps }) {
-    return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
-    )
+  const [isLoading, setIsLoading] = useState(true);
+    useEffect( () => setTimeout(() => {
+          setIsLoading(false)
+        }, 3500)
+     ,[]);
+
+      return (
+        <>
+          { isLoading && (
+            <LoadingScreen />
+          )}
+          { !isLoading && (
+            <Layout>
+                <Component {...pageProps} />
+            </Layout> 
+          )}
+        </>
+      )
 }
 
 export default MyApp;

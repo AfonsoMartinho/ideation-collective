@@ -1,6 +1,5 @@
 import Tag from "../../components/tag";
 import fetchFromCMS from "/lib/service";
-import Constants from '/constants.json'
 
 
 export default function Project({ project, categories }) {

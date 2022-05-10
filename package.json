@@ -2,11 +2,13 @@
   "name": "learn-starter",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ideation-collective.com/",
   "scripts": {
     "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint",
+    "export": "next export"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
@@ -16,6 +18,7 @@
     "lottie-web": "^5.8.1",
     "next": "^11.0.0",
     "next-transpile-modules": "^9.0.0",
+    "node-gyp": "^9.0.0",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-animation-on-scroll": "^2.1.0",
