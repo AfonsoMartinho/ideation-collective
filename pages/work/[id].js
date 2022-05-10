@@ -30,7 +30,7 @@ export default function Project({ project, categories }) {
                 { project.Media.data &&(
                   <div className={`${rootClassName}__gallery`}>
                     {project.Media.data.map( (image, index) =>{
-                      return(<img key={index} src={`${Constants.STRAPI_DOMAIN}${image.attributes.url}`} alt={image.attributes.name} />)  
+                      return(<img key={index} src={`${image.attributes.url}`} alt={image.attributes.name} />)  
                     })
                     }
                   </div>
@@ -43,7 +43,7 @@ export default function Project({ project, categories }) {
                         <img src="../assets/moov-ideation.png" alt="moov-ideation" />
                         { project.FinalLogo.data &&(
                           <div className={`${rootClassName}__final__img__logo`}>
-                            <img src={`${Constants.STRAPI_DOMAIN}${project.FinalLogo.data.attributes.url}`} alt="moov-ideation" />
+                            <img src={`${project.FinalLogo.data.attributes.url}`} alt="moov-ideation" />
                           </div>
                         )}
                     </div>
