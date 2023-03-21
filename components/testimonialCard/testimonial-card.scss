@@ -2,9 +2,22 @@
     width: 330px;
     min-height: 317px;
     position: relative;
+    cursor: url("/assets/cursor-case-study.png"), pointer;
+        cursor: -webkit-image-set(
+            url('/assets/cursor-case-study.png') 8x,
+            url('/assets/cursor-case-study.png') 8x
+        ), pointer;	
+
+    @include mobile{
+        width: 240px;
+        min-height: 240px;
+    }
     &__logo{
         height: 40px;
         margin-bottom: 40px;
+        @include mobile{
+            margin-bottom: 30px;
+        }
     }
     &__content{
         font-style: normal;
@@ -15,6 +28,10 @@
         letter-spacing: 0.01em;
 
         color: #FFFFFF;
+        @include mobile{
+            font-size: 16px;
+            line-height: 22px;
+        }
     }
     &__footer{
         font-size: 16px;
@@ -22,5 +39,11 @@
         position: absolute;
         top: 308px;
         letter-spacing: 0.02em;
+
+        @include mobile{
+            font-size: 14px;
+            line-height: 17px;
+            top: 200px;
+        }
     }
 }

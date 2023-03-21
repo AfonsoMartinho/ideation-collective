@@ -1,6 +1,10 @@
 .ic-home-wrapper{
     padding: 0 70px;
     height: $contentHeight;
+    @include mobile {
+        padding: 0;
+        margin-top: 50px;
+    }
     &__title{
         width: 100%;
         height: 100%;
@@ -12,6 +16,34 @@
             line-height: 140px;
             letter-spacing: 0.02em;
             color: #fff;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            @include mobile {
+                font-size: 50px;
+                line-height: 70px;
+                margin: 0;
+                padding: 0;
+                margin-top: 15px;
+
+                img{
+                    // margin-top: 20px;
+                }
+                &.no-wrap{
+                    flex-wrap: nowrap;
+                    letter-spacing: 0;
+                    justify-content: flex-start;
+                    img{
+                        height: 80px;
+                        padding: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+            @include tablet {
+                font-size: 80px;
+                line-height: 140px;
+            }
             &__gif1{
                 height: 103px;
                 padding: 0 50px;
@@ -20,11 +52,20 @@
             &__gif2{
                 height: 103px;
                 padding: 0 50px 0 0;
+                @include mobile {
+                    height: 80px;
+                    padding: 0 30px 0 0;
+                }
             }
 
             &__gif3{
                 height: 103px;
                 padding: 0 50px;
+                @include mobile {
+                    height: 80px;
+                    padding: 0;
+                    margin-top: 40px;
+                }
             }
         }
     }
@@ -39,6 +80,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 100px;
+        @include mobile {
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     &__image-showcase{
@@ -47,8 +93,19 @@
         align-items: center;
         justify-content: center;
         margin-top: 100px;
+        cursor: url("/assets/cursor-work.png"), pointer;
+        cursor: -webkit-image-set(
+            url('/assets/cursor-work.png') 2.5x,
+            url('/assets/cursor-work.png') 2.5x
+        ), pointer;	
         &__img{
+            border-radius: 16px;
             width: 100%;
+            // cursor: url("/assets/cursor-work.png"), auto;	
+
+        }
+        @include mobile {
+            margin-top: 40px;
         }
     }
 
@@ -66,6 +123,21 @@
         &__button{
             margin-top: 40px;
         }
+        @include mobile {
+            font-size: 20px;
+            line-height: 24px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0 50px;
+            margin-top: 60px;
+        }
+
+        @include tablet{
+            font-size: 28px;
+            line-height: 34px;
+            padding: 100px 200px 0 200px;
+
+        }
     }
 
     &__testimonials{
@@ -74,11 +146,19 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 258px;
+        @include mobile{
+            margin-top: 95px;
+            margin-bottom: 0;
+        }
         &__title{
             color: $purple;
             font-size: 16px;
             line-height: 18px;
             letter-spacing: 0.02em;
+            @include mobile{
+                font-size: 14px;
+                line-height: 17px;
+            }
         }
         &__subtitle{
             font-size: 36px;
@@ -86,16 +166,30 @@
             letter-spacing: 0.02em;
             color: #fff;
             margin-top: 15px;
+
+            @include mobile{
+                font-size: 20px;
+                line-height: 24px;
+            }
+
         }
         &__list{
             margin-top: 100px;
             width: calc(100% + $mainPadding);
+            @include mobile{
+                margin-top: 67px;
+                width: calc(100% + 30px);
+
+            }
         }
     }
 
     &__mission{
         width: 100%;
         margin-top: 240px;
+        @include mobile{
+            margin-top: 120px;
+        }
         &__row{
             width: 100%;
             text-align: left;
@@ -105,19 +199,48 @@
             color: #fff;
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
+
+            @include mobile {
+                font-size: 48px;
+                line-height: 58px;
+                flex-wrap: wrap;
+                margin-top: 18px;
+            }
+            @include tablet{
+                font-size: 72px;
+                line-height: 140px;
+            }
             &__gif1{
                 height: 103px;
                 padding: 0 50px;
+                @include mobile {
+                    height: 60px;
+                    padding: 0 0 0 15px;
+                }
             }
 
             &__gif2{
                 height: 103px;
                 padding: 0 50px 0 0;
+                @include mobile {
+                    height: 60px;
+                    padding: 0 0 0 15px;
+                }
             }
 
             &__gif3{
                 height: 103px;
                 padding: 0 50px;
+                @include mobile {
+                    height: 60px;
+                    padding: 0 0 0 15px;
+                }
+            }
+        }
+        &__button{
+            @include mobile{
+                margin-top: 40px;
             }
         }
     }
@@ -127,17 +250,43 @@
         align-items: center;
         justify-content: space-around;
         margin-top: 125px;
+        
+        @include mobile{
+            margin-top: 75px;
+            flex-direction: column;
+        }
 
         &__service{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @include mobile{
+                margin-bottom: 60px;
+                img{
+                    width: 160px;
+                }
+            }
+            @include tablet{
+                img{
+                    width: 160px;
+                }
+            }
             &__title{
                 font-size: 24px;
                 line-height: 27px;
                 letter-spacing: 0.02em;
                 margin-top: 55px;
+                @include mobile{
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 0.02em;
+                    margin-top: 30px;
+                }
+                @include tablet{
+                    font-size: 20px;
+                    line-height: 24px;
+                }
             }
         }
     }
@@ -153,9 +302,23 @@
         text-align: center;
         letter-spacing: 0.02em;
         border-bottom: 1px solid #E5E5E5;
+        @include mobile{
+            margin-top: 120px
+        }
         &__text{
             max-width: 780px;
             margin-bottom: 120px;
+            @include mobile{
+                margin-bottom: 60px;
+                font-size: 20px;
+                line-height: 24px;
+                text-align: center;
+            }
+            @include tablet{
+                font-size: 28px;
+                line-height: 45px;
+                margin-bottom: 60px;
+            }
         }
     }
 
@@ -163,22 +326,39 @@
         margin-top: 80px;
         width: 100%;
         margin-bottom: 120px;
+        @include mobile{
+            margin-bottom: 100px;
+            margin-top: 40px;
+        }
         &__title{
             color: $purple;
             font-size: 16px;
             letter-spacing: 0.02em;
             line-height: 18px;
+            @include mobile{
+                font-size: 14px;
+                line-height: 17px;
+            }
+            @include tablet{
+                margin-bottom: 15px;
+            }
         }
         &__subtitle{
             width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
+            
             &__text{
                 font-size: 36px;
                 line-height: 41px;
                 letter-spacing: 0.02em;
                 color:#fff;
+                @include mobile{
+                    margin-top: 17px;
+                    line-height: 24px;
+                    font-size: 20px;
+                }
             }
         }
         &__list{
@@ -186,22 +366,62 @@
             justify-content: center;
             align-items: center;
             margin-top: 120px;
+            @include mobile{
+                flex-direction: column;
+                margin-top: 20px;
+            }
+            @include tablet{
+                margin-top: 30px;
+            }
             &__case{
-                width: 50%;
+                width: 100%;
                 display: flex;
+                @include mobile{
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 40px;
+                }
+                @include tablet{
+                    flex-direction: column;
+                    width: 100%;
+                    margin-top: 40px;
+                }
                 &__logo{
                     width: 310px;
                     height: 310px;
+                    @include mobile{
+                        width: 100%;
+                        height: auto;
+                    }
+                    @include tablet{
+                        width: 452px;
+                        height: 452px;
+                    }
                 }
                 &__content{
                     margin-left: 30px;
                     margin-right: 10px;
+                    @include mobile{
+                        margin: 0;
+                    }
+                    @include tablet{
+                        margin-left: 0;
+                    }
                     &__text{
                         margin-top: 65px;
                         font-size: 24px;
                         line-height: 33px;
                         letter-spacing: 0.02em;
                         color: #fff;
+                        @include mobile{
+                            font-size: 16px;
+                            line-height: 24px;
+                            margin: 30px 0 20px 0;
+                        }
+                        @include tablet{
+                            font-size: 20px;
+                            line-height: 26px;
+                        }
                     }
                     &__tags{
                         margin-top: 28px;

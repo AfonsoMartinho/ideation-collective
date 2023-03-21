@@ -5,57 +5,131 @@
         line-height: 55px;
         text-align: center;
         letter-spacing: 0.02em;
+        @include mobile{
+            font-size: 32px;
+            line-height: 38px;
+            margin-top: 30px;
+            br{
+                display: none;
+            }
+        }
+        @include tablet{
+            width: 610px;
+            font-size: 40px;
+            line-height: 48px;
+            margin: auto;
+            br{
+                display: none;
+            }
+        }
     }
     &__services-showcase{
         margin-top: 160px;
         margin-bottom: 120px;
+        @include mobile{
+            margin-top: 92px;
+        }
         &__service{
             border-top: 1px solid #776AF6;
             width: 100%;
             display: flex;
             justify-content: center;
             margin-bottom: 80px;
+            position: relative;
+            @include mobile{
+                flex-direction: column;
+            }
             &__heading{
                 width: 100%;
                 display: flex;
                 align-items: flex-start;
                 justify-content: space-between;
                 position: absolute;
+                top: 0;
                 padding: 16px 70px 0 70px;
+                @include mobile{
+                    padding: 16px 0 0 0;
+                    // justify-content: spa;
+                }
                 &__text{
                     font-size: 16px;
                     line-height: 18px;
                     letter-spacing: 0.02em;
                     color: $purple;
+                    @include tablet{
+                        line-height: 19px;
+                    }
                 }
             }
             &__img{
                 width: 50%;
                 margin-top: 119px;
                 margin-left: 122px;
+                @include mobile{
+                    margin: 0;
+                    margin-top: 119px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
                 img{
                     width: 294px;
+                    @include mobile{
+                        width: 210px;
+                    }
+                    @include tablet{
+                        width: 204px;
+                    }
                 }
             }
             &__description{
                 width: 50%;
                 margin-top: 119px;
+                @include mobile{
+                    width: 100%;
+                    .tag{
+                        height: 41px;
+                    }
+                }
+                @include tablet{
+                    .tag{
+                        height: 41px;
+                    }
+                }
+                
 
                 &__text{
                     margin-top: 20px;
                     font-size: 48px;
                     line-height: 55px;
                     letter-spacing: 0.02em;
+                    @include mobile{
+                        font-size: 32px;
+                        line-height: 38px;
+                    }
+                    @include tablet{
+                        font-size: 40px;
+                        line-height: 48px;
+                    }
                 }
 
                 &__accordiom{
                     margin-top: 60px;
+                    @include tablet{
+                        margin-top: 40px;
+                    }
                 }
             }
             &.right{
                 flex-direction: row-reverse;
+                @include mobile{
+                    flex-direction: column;
+                }
                 img{
                     margin-left: 240px;
+                    @include mobile{
+                        margin: 0;
+                    }
                 }
             }
         }
@@ -67,8 +141,25 @@
         text-align: center;
         letter-spacing: 0.02em;
         margin-top: 160px;
+        @include mobile{
+            font-size: 32px;
+            line-height: 38px;
+        }
+        @include tablet{
+            width: 610px;
+            font-size: 40px;
+            line-height: 48px;
+            margin: auto;
+            margin-top: 160px;
+            br{
+                display: none;
+            }
+        }
     }
     &__table{
         margin-top: 160px;
+        @include tablet{
+            margin-top: 120px;
+        }
     }
 }

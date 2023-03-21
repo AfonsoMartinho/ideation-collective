@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_tags_cat_tests",
+  "info": {
+    "displayName": "catTEST",
+    "icon": "arrows-alt-v",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}

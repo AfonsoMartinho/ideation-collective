@@ -1,7 +1,11 @@
 .h-carousel{
     width: 100%;
     height: 397px;
-    overflow-y: scroll;
+    // overflow-y: scroll;
+
+    @include mobile {
+        height: 270px;
+    }
 
 
     &__content{
@@ -10,17 +14,24 @@
         margin: 0;
         display: grid;
         grid-gap: calc(var(--gutter) / 2);
-        grid-template-columns: repeat(4, calc(50% - var(--gutter) * 2)); // change 4 for the number of items
+        grid-template-columns: repeat(3, calc(50% - var(--gutter) * 2)); // change 3 for the number of items
         grid-template-rows: minmax(150px, 1fr);
         
-        overflow-x: scroll;
         scroll-snap-type: x proximity;
         padding-bottom: calc(.75 * var(--gutter));
         margin-bottom: calc(-.25 * var(--gutter));
         list-style: none;
         padding: 0;
+        @include mobile{
+            overflow-x: scroll;
+            height: 270px;
+            grid-template-columns: repeat(3, calc(78% - var(--gutter) * 2)); // change 3 for the number of items            
+        }
         div{
             width: 310px;
+            @include mobile{
+                width: 240px;
+            }
         }
 
         scrollbar-color: #fff #c4c4c4;
@@ -70,10 +81,20 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            @include mobile{
+                width: 260px;
+                height: 260px;
+            }
         }
     }
 }
 
 :root {
     --gutter: 194px; // space between cards
+    @include mobile{
+        --gutter: 0px; // space between cards
+    }
+    @include tablet{
+        --gutter: 120px; // space between cards
+    }
 }

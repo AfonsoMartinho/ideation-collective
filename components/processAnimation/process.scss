@@ -7,11 +7,37 @@
         height: 425px;
     }
     &__scrollable{
-        margin-top: 470px;
-        &__text{
+        height: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &__container__minor{
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &__text__minor{
             max-width: 420px;
             margin-left: 130px;
-            margin-top: 530px;
+            margin-top: 720px;
+            height: 100%;
+            position: sticky;
+            top: 40%;
+            transition: all 0.5s ease-in-out;
+            background-color: $background;
+            
+            &.hide{
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            &:not(.hide) {
+                opacity: 1;
+            }
             &__slash{
                 font-size: 36px;
                 line-height: 43px;
@@ -24,12 +50,74 @@
                 font-size: 36px;
                 line-height: 43px;
                 letter-spacing: 0.02em;
+                @include tablet{
+                    font-size: 28px;
+                    line-height: 34px;
+                }
             }
             &__description{
                 margin-top: 40px;
                 font-size: 24px;
                 line-height: 33px;
                 letter-spacing: 0.01em;
+                @include tablet{
+                    font-size: 20px;
+                    line-height: 26px;
+                }
+            }
+        }
+
+        &__container{
+            height: 100%;
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &__text{
+            max-width: 420px;
+            margin-left: 130px;
+            margin-top: 530px;
+            height: 100%;
+            position: sticky;
+            top: 30%;
+            transition: all 0.5s ease-in-out;
+            background-color: $background;
+            
+            &.hide{
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            &:not(.hide) {
+                opacity: 1;
+            }
+            &__slash{
+                font-size: 36px;
+                line-height: 43px;
+                letter-spacing: 0.02em;
+                color: #776AF6;
+            }
+            &__title{
+                margin-top: 10px;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 43px;
+                letter-spacing: 0.02em;
+                @include tablet{
+                    font-size: 28px;
+                    line-height: 34px;
+                }
+            }
+            &__description{
+                margin-top: 40px;
+                font-size: 24px;
+                line-height: 33px;
+                letter-spacing: 0.01em;
+                @include tablet{
+                    font-size: 20px;
+                    line-height: 26px;
+                }
             }
         }
 

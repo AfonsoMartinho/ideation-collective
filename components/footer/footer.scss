@@ -3,16 +3,29 @@
     flex-direction: column;
     width: 100%;
     padding: 0 70px 60px 70px;
+    @include mobile{
+        padding: 0;
+    }
     &__top{
         margin-bottom: 96px;
+        @include mobile{
+            margin-bottom: 30px;
+        }
         &__title{
             font-size: 48px;
             line-height: 55px;
             letter-spacing: 0.02em;
             color: #FFFFFF;
+            @include mobile{
+                font-size: 32px;
+                line-height: 38px;
+            }
         }
         &__button{
             margin-top: 30px;
+            @include mobile{
+                margin-bottom: 55px;
+            }
         }
     }
     &__bottom{
@@ -24,16 +37,44 @@
         line-height: 18px;
         letter-spacing: 0.02em;
         color: #fff;
+        @include mobile{
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 14px;
+            line-height: 17px;
+        }
+        &__location{
+            margin-top: 10px;
+        }
+        &__mail a{
+            color: #fff;
+            text-decoration: none;
+            &:hover{
+                color: $purple;
+            }
+
+            &.active{
+                color: $purple;
+            }
+        }
         &__links{
             width: 450px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @include mobile{
+                width: 100%;
+                margin-top: 55px;
+                margin-bottom: 30px;
+            }
             &__link{
                 color: #fff;
                 text-decoration: none;
                 padding: 30px;
     
+                @include mobile{
+                    padding: 0
+                }
                 &:hover{
                     color: $purple;
                 }

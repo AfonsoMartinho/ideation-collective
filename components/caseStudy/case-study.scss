@@ -3,28 +3,39 @@
     height: 411px;
     position: relative;
     cursor: pointer;
+    transition: background, 0.5s, ease-in-out;
+    display:inline-block; 
+    &:hover{
+        &::after{
+            transition: all, 0.5s, ease-in-out;
+            content: '';
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            // height: 100px;
+            background: url('/assets/hover-case-study.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            position: absolute;
+            pointer-events: none;
+        }
+    }
+    a{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    &__thumbnail{
+        width: 100%;
+        height: 100%;
+        transition: background, 0.5s, ease-in-out;
+        display:inline-block; 
+    }
     &.olie{
-        background-image: ('/assets/olie-case.png');
-        background-size: 100%;
-    }
-    &.consult{
-        background-image: url('/assets/consult-case.png');
-        background-size: 100%;
-    }
-    &.other{
-        background-image: url('/assets/other-case.png');
-        background-size: 100%;
-    }
-    &.lectures{
-        background-image: url('/assets/lectures-case.png');
-        background-size: 100%;
-    }
-    &.moov{
-        background-image: url('/assets/moov-case.png');
-        background-size: 100%;
-    }
-    &.eazup{
-        background-image: url('/assets/eazup-case.png');
+        background-image: url('/assets/olie-case.png');
         background-size: 100%;
     }
     &__tags{
@@ -34,12 +45,25 @@
         display: flex;
         align-items: flex-end;
         justify-content: flex-start;
+        z-index: 3;
+        @include mobile{
+            flex-wrap: wrap;
+        }
+        @include tablet{
+            flex-wrap: wrap;
+        }
         &__tag{
             margin: 0 4px;
             background-color: #776AF6;
             border: none;
             span{
                 color:#62F9BB;
+                @include tablet{
+                    font-size: 11px;
+                    line-height: 10px;
+                    letter-spacing: .02em;
+                    padding: 6px 6px;
+                }
             }
         }
     }

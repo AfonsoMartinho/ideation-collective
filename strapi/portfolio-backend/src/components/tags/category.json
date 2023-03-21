@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_tags_categories",
+  "info": {
+    "displayName": "Category",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::category.category"
+    }
+  }
+}

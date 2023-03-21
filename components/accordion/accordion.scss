@@ -1,10 +1,19 @@
 .ic-accordion{
     width: 640px;
+    @include mobile{
+        width: 100%;
+    }
+    @include tablet{
+        width: 453px;
+    }
     &__container{
         border-bottom: 1px solid #C4C4C4;
         &__section{
             border-top: 1px solid #C4C4C4;
             padding-top: 20px;
+            @include mobile{
+                padding-top: 10px;
+            }
             &__header{
                 cursor: pointer;
                 margin-bottom: 20px;
@@ -12,6 +21,9 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                @include mobile{
+                    margin-bottom: 10px;
+                }
                 &:hover{
                     opacity: 0.6;
                 }
@@ -22,6 +34,14 @@
                     letter-spacing: 0.02em;
                     color: #FFFFFF;
                     font-weight: bold;
+                    @include mobile{
+                        font-size: 16px;
+                        line-height: 24px;
+                    }
+                    @include tablet{
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
                 }
                 &__toggle{
                     pointer-events: none;
@@ -43,6 +63,14 @@
                 letter-spacing: 0.01em;
                 color: #FFFFFF;
                 transition: height 0.5s ease-out;
+                @include mobile{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+                @include tablet{
+                    font-size: 20px;
+                    line-height: 26px;
+                }
             }
         }
     }
